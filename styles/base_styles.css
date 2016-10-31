@@ -1,0 +1,23 @@
+#bkground {
+    background-image: url('../assets/trees23.jpg');
+    background-attachment: fixed;
+    width: 1048px;
+    height: 699px;
+    margin: 0;
+    padding: 0;
+    overflow: visible;
+}
+
+.flex-container {
+    display: flex;
+}
+
+#formSide {
+    flex-basis: 42.5%;
+    padding-left: 2.5%;
+}
+
+#introSide {
+    flex-basis: 52.5%;
+    padding-right: 2.5%;
+}
