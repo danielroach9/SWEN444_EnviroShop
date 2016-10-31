@@ -1,6 +1,5 @@
 #bkground {
-    background-image: url('../assets/trees23.jpg');
-    background-attachment: fixed;
+    background: url('../assets/trees23.jpg') fixed;
     width: 1048px;
     height: 699px;
     margin: 0;
