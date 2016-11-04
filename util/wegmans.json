@@ -1,0 +1,10 @@
+{
+  "id": 1,
+  "name": "Wegman's",
+  "street_address": "1 Main St",
+  "city": "Rochester",
+  "state": "NY",
+  "zip_code": "14607",
+  "phone_num": "585-123-4567",
+  "website": "wegmans.com"
+}

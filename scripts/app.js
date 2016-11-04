@@ -3,9 +3,13 @@ var app = angular.module('EnviroShop', ['ngRoute']);
 app.config(['$routeProvider', function ($routeProvider) {
 
     $routeProvider
+        .when('/', {
+            templateUrl: 'login.html',
+            controller: 'HomeCtlr'
+        })
         .when('/home', {
-            templateUrl: '',
-            controller: ''
+            templateUrl: 'home.html',
+            controller: 'HomeCtlr'
         })
         .when('/businessDashboard',{
             templateUrl: 'businessdashboard.html',
