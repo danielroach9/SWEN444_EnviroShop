@@ -1,5 +1,6 @@
 #bkground {
-    background: url('../client/assets/trees23.jpg') fixed;
+    /*background: url('../client/assets/trees23.jpg') fixed;*/
+    background: url('../assets/trees23.jpg') fixed;
     width: 1048px;
     height: 699px;
     margin: 0;
@@ -20,3 +21,105 @@
     flex-basis: 52.5%;
     padding-right: 2.5%;
 }
+
+.enviroShopMainColor {
+    background-color: #2b8742;
+}
+
+.busView {
+    background-color: #666666;
+}
+
+/* Dustismo font */
+@font-face {
+    font-family: dustismo;
+    src: url('../assets/dustismo.ttf');
+}
+
+/* Liberation Sans font */
+@font-face {
+    font-family: liberation_sans;
+    src: url('../assets/liberation_sans.ttf');
+}
+
+.dustismo {
+    font-family: dustismo;
+}
+
+.liberation-sans {
+    font-family: liberation_sans;
+}
+
+
+
+/******************************
+
+Start of Navbar Style Rules
+
+*******************************/
+
+.navIcon {
+    text-decoration: none;
+    color: black;
+}
+
+.glyphs a span {
+    font-size: 3.5em;
+}
+
+#logo {
+    width: 60px;
+    height: 60px;
+    background-color: white;
+}
+
+.navbar {
+    border-color: #2b8742;
+    border-radius: 0px;
+    border: 0;
+    margin-bottom: 0;
+}
+
+.navbar .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.navIcon span {
+    width: inherit;
+    height: inherit;
+}
+
+/******************************
+
+End of Navbar Style Rules
+
+*******************************/
+
+
+
+
+
+/*********************************
+
+Start of Business Overview Rules
+
+**********************************/
+
+.overview {
+    width: 33%;
+    background-color: #666666;
+    display: flex;
+}
+
+.overview h2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    align-self: center;
+}
+
+/*********************************
+
+End of Business Overview Rules
+
+**********************************/

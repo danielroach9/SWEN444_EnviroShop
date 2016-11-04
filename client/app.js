@@ -15,15 +15,23 @@ app.config(['$routeProvider', function ($routeProvider) {
             templateUrl: 'views/businessreviews.html',
             controller: ''
         })
-        .when('productview', {
+        .when('/productview', {
             templateUrl: 'views/productview.html',
             controller: ''
         })
-        .when('search', {
+        .when('/search', {
             templateUrl: 'views/searchresults.html',
             controller: ''
         })
-        .otherwise({ redirectTo: 'views/home'});
+        .when('/navbar', {
+            templateUrl: 'views/navbar.html',
+            controller: ''
+        })
+        .when('/overview', {
+            templateUrl: 'views/business_overview.html',
+            controller: ''
+        })
+        .otherwise({ redirectTo: '/overview'});
 }]);
 
 /*
