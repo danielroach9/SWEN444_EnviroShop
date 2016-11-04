@@ -1,5 +1,5 @@
 #bkground {
-    background: url('../client/assets/trees23.jpg') fixed;
+    background: url('../assets/trees23.jpg') fixed;
     width: 1048px;
     height: 699px;
     margin: 0;
@@ -9,6 +9,13 @@
 
 .flex-container {
     display: flex;
+}
+
+/* Use this for modals or anything else that needs to be opaque gray */
+.opaqueGray {
+    background: #333333;
+    -moz-opacity: 0.90;
+    opacity: 0.90;
 }
 
 #formSide {
