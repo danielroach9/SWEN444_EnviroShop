@@ -8,6 +8,6 @@
   },
   "scripts": {
     "prestart": "npm install",
-    "start": "http-server ./views -a localhost -p 8000 -c-1"
+    "start": "http-server ./client -a localhost -p 8000 -c-1"
   }
 }

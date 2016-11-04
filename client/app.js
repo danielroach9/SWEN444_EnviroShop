@@ -3,27 +3,27 @@ var app = angular.module('EnviroShop', ['ngRoute']);
 app.config(['$routeProvider', function ($routeProvider) {
 
     $routeProvider
-        .when('/home', {
-            templateUrl: '',
-            controller: ''
+        .when('/', {
+            templateUrl: 'views/home.html',
+            controller: 'HomeCtlr'
         })
         .when('/businessDashboard',{
-            templateUrl: 'businessdashboard.html',
+            templateUrl: 'views/businessdashboard.html',
             controller: ''
         })
         .when('/businessReviews', {
-            templateUrl: 'businessreviews.html',
+            templateUrl: 'views/businessreviews.html',
             controller: ''
         })
         .when('productview', {
-            templateUrl: 'productview.html',
+            templateUrl: 'views/productview.html',
             controller: ''
         })
         .when('search', {
-            templateUrl: 'searchresults.html',
+            templateUrl: 'views/searchresults.html',
             controller: ''
         })
-        .otherwise({ redirectTo: '/home'});
+        .otherwise({ redirectTo: 'views/home'});
 }]);
 
 /*
