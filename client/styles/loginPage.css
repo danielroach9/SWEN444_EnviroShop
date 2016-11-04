@@ -1,0 +1,21 @@
+#loginBackground {
+    background: url('../assets/trees23.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.col-md-8 {
+    padding-bottom: 100%;
+    margin-bottom: -100%;
+    overflow-y: hidden;
+}
+
+.col-md-4 {
+    padding-bottom: 100%;
+    margin-bottom: -100%;
+    overflow-y: hidden;
+}
