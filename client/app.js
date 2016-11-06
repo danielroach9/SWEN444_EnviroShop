@@ -27,6 +27,10 @@ app.config(['$routeProvider', function ($routeProvider) {
             templateUrl: 'views/navbar.html',
             controller: ''
         })
+        .when('/review', {
+            templateUrl: 'views/review.html',
+            controller: ''
+        })
         .when('/overview', {
             templateUrl: 'views/business_overview.html',
             controller: ''
