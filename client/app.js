@@ -4,11 +4,15 @@ app.config(['$routeProvider', function ($routeProvider) {
 
     $routeProvider
         .when('/', {
-            templateUrl: 'views/home.html',
+            templateUrl: 'views/login.html',
             controller: 'HomeCtlr'
         })
         .when('/businessDashboard',{
             templateUrl: 'views/businessdashboard.html',
+            controller: ''
+        })
+        .when('/shopperDashboard',{
+            templateUrl: 'views/shopperDashboard.html',
             controller: ''
         })
         .when('/businessReviews', {
@@ -35,7 +39,7 @@ app.config(['$routeProvider', function ($routeProvider) {
             templateUrl: 'views/business_overview.html',
             controller: ''
         })
-        .otherwise({ redirectTo: '/overview'});
+        .otherwise({ redirectTo: '/login'});
 }]);
 
 /*

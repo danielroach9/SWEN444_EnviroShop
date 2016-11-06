@@ -1,5 +1,5 @@
-#loginBackground {
-    background: url('../assets/trees23.jpg');
+body {
+    background-image: url('../assets/trees23.jpg');
     background-repeat: no-repeat;
     background-size: 100%;
     max-width: 100%;
@@ -76,4 +76,12 @@
     border-color: #2b8742;
     border-width: 2px;
     box-shadow: inset 0 1px 1px rgba(51, 51, 51, 0.075), 0 0 8px rgba(255, 255, 255, 0.7);
+}
+
+.same-size-button {
+    width: 100px;
+}
+
+input {
+    margin-bottom: 10px;
 }
