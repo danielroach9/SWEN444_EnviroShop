@@ -56,7 +56,9 @@
     font-family: liberation_sans;
 }
 
-
+.businessRightSideGradient {
+    background-image: linear-gradient(white, rgb(110, 171, 126));
+}
 
 /******************************
 
@@ -132,9 +134,8 @@ Start of Business Overview Rules
 **********************************/
 
 .overview {
-    width: 33%;
+    width: 30%;
     background-color: #666666;
-    display: flex;
 }
 
 .overview h2 {
@@ -143,6 +144,42 @@ Start of Business Overview Rules
     align-self: center;
 }
 
+.mainPanel {
+    width: 70%;
+}
+
+#busLogo {
+    width: 300px;
+    max-height: 300px;
+    justify-content: center;
+    margin: 0 auto;
+    display: block;
+    padding-bottom: 15px;
+}
+
+#busName {
+    color: white;
+    text-align: center;
+    float: right;
+    width: 100%;
+    margin: 15px 0;
+}
+
+#infoboxes {
+    margin-bottom: 15px;
+}
+
+.infobox {
+    border-radius: 15px;
+    background-color: white;
+    width: 60%;
+    display: block;
+    margin: 0 auto;
+}
+
+.infobox p {
+    margin-bottom: 3px;
+}
 /*********************************
 
 End of Business Overview Rules
