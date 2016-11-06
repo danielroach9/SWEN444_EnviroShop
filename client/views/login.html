@@ -1,13 +1,7 @@
-<!-- (CSS) CDN Link to Bootstrap 3.3.7 -->
-<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-<!-- Link to login Page css -->
-<link rel="stylesheet" type="text/css" href="../styles/base_styles.css">
-
 <!-- Link to login Page css -->
 <link rel="stylesheet" type="text/css" href="../styles/loginPage.css">
 
-<body id="loginBackground">
+<div id="loginBackground">
     <div class="row">
         <div class="col-md-8 gradient">
             <p id="main-logo-left">Enviro<span id="main-logo-right">Shop</span></p>
@@ -19,17 +13,15 @@
         <div class="col-md-4 opaqueGrayDark">
             <img class="center-block" src="../assets/icon_blatt.png"/>
             <div class="form-group col-xs-8 col-centered">
-                <input type="text" class="form-control" placeholder="Email" id="usr">
-            </div>
-            <div class="form-group col-xs-8 col-centered">
-                <input type="password" class="form-control" placeholder="Password" id="pwd">
+                <input ng-model="loginCredentials.email" type="text" class="form-control" placeholder="Email" id="usr">
+                <input ng-model="loginCredentials.pswd" type="password" class="form-control" placeholder="Password" id="pwd">
             </div>
             <div class="col-xs-8 col-centered">
                 <div class="col-centered">
-                    <input class="btn btn-primary same-size-button btn-lg" type="submit" value="Log In">
-                    <input class="btn btn-primary same-size-button btn-lg pull-right" type="submit" value="Sign Up">
+                    <button ng-click="login()" class="btn btn-primary same-size-button btn-lg">Log In</button>
+                    <button class="btn btn-primary same-size-button btn-lg pull-right">Sign Up</button>
                 </div>
             </div>
         </div>
     </div>
-</body>
+</div>
