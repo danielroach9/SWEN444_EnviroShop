@@ -19,3 +19,23 @@
     margin-bottom: -100%;
     overflow-y: hidden;
 }
+
+#main-logo-left {
+    text-align: center;
+    font-family: liberation_sans;
+    font-size: 80px;
+    color: #2b8742;
+    line-height: 3em;
+}
+
+#main-logo-right {
+    color: #ffffff;
+}
+
+#gradient {
+    background: rgba(51,51,51,0.5); /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(top, rgba(51,51,51,.7), rgba(0,0,0,0), rgba(0,0,0,0)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(top, rgba(51,51,51,.7), rgba(0,0,0,0), rgba(0,0,0,0)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(top, rgba(51,51,51,.7), rgba(0,0,0,0), rgba(0,0,0,0)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(rgba(51,51,51,.7), rgba(0,0,0,0), rgba(0,0,0,0)); /* Standard syntax */
+}
