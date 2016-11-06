@@ -3,8 +3,9 @@ angular.module('EnviroShop')
     .controller('HomeCtlr', ['$scope', '$location', function ($scope, $location) {
 
         console.log("HomeCtlr initialized");
+        /* Hide the login signup divs immediately */
+        $('#inputFieldsShopperSignup').hide();
         $scope.loginCredentials = {};
-        $scope.nextPage;
 
         $scope.login = function () {
             if ($scope.loginCredentials.email == "wegmans@gmail.com" && $scope.loginCredentials.pswd == "123456") {
@@ -14,5 +15,16 @@ angular.module('EnviroShop')
             else if ($scope.loginCredentials.email == "enviroshopUser@gmail.com" && $scope.loginCredentials.pswd == "123456") {
                 $location.url('/shopperDashboard');
             }
+
+            else { $scope.showInvalidLoginModal(); }
         };
+
+        $scope.showInvalidLoginModal = function () {
+            $('#loginError').modal('show');
+        };
+
+        $scope.signUp = function () {
+            $('#inputFieldsMain').hide();
+            $('#inputFieldsShopperSignup').show();
+        }
     }]);

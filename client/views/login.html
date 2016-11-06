@@ -12,16 +12,39 @@
 
         <div class="col-md-4 opaqueGrayDark">
             <img class="center-block" src="../assets/icon_blatt.png"/>
-            <div class="form-group col-xs-8 col-centered">
-                <input ng-model="loginCredentials.email" type="text" class="form-control" placeholder="Email" id="usr">
-                <input ng-model="loginCredentials.pswd" type="password" class="form-control" placeholder="Password" id="pwd">
+            <div class="form-group col-xs-8 col-centered" id="inputFieldsMain">
+                <input ng-model="loginCredentials.email" type="text" class="form-control" placeholder="Email">
+                <input ng-model="loginCredentials.pswd" type="password" class="form-control" placeholder="Password">
+            </div>
+            <div class="form-group col-xs-8 col-centered" id="inputFieldsShopperSignup">
+                <input ng-model="loginCredentials.firstName" type="text" class="form-control" placeholder="First Name">
+                <input ng-model="loginCredentials.lastName" type="text" class="form-control" placeholder="Last Name">
+                <input ng-model="loginCredentials.email" type="text" class="form-control" placeholder="Email">
+                <input ng-model="loginCredentials.email" type="text" class="form-control" placeholder="Phone Number ###-###-####">
+                <input ng-model="loginCredentials.pswd1" type="password" class="form-control" placeholder="Password">
+                <input ng-model="loginCredentials.pswd2" type="password" class="form-control" placeholder="Confirm Password">
             </div>
             <div class="col-xs-8 col-centered">
                 <div class="col-centered">
                     <button ng-click="login()" class="btn btn-primary same-size-button btn-lg">Log In</button>
-                    <button class="btn btn-primary same-size-button btn-lg pull-right">Sign Up</button>
+                    <button ng-click="signUp()" class="btn btn-primary same-size-button btn-lg pull-right">Sign Up</button>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="loginError" tabindex="1" role="dialog" aria-labelledby="modalLabel">
+    <div class="modal-dialog liberation_sans" role="document">
+        <div class="modal-content opaqueGrayDark modal-sm">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span style="color: white" aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modalLabel">Incorrect Login Credentials</h4>
+            </div>
+            <div class="modal-body">
+                Your login credentials are incorrect, please try again.
+            </div>
+        </div>
+    </div>
+</div>
+

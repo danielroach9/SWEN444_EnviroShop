@@ -72,10 +72,14 @@ body {
     background-color: #2b8742 !important;
 }
 
+.btn-primary:hover {
+    box-shadow: inset 0 0px 20px 1px #ffffff, 0px 1px 0 #666666, 0 6px 0px #333333;
+}
+
 .btn-primary:active {
     border-color: #2b8742;
     border-width: 2px;
-    box-shadow: inset 0 1px 1px rgba(51, 51, 51, 0.075), 0 0 8px rgba(255, 255, 255, 0.7);
+    box-shadow: inset 0 1px 1px rgba(51, 51, 51, 0.075), 0 0 8px rgba(255, 255, 255, 0.3);
 }
 
 .same-size-button {
@@ -84,4 +88,9 @@ body {
 
 input {
     margin-bottom: 10px;
+}
+
+.modal-title, .modal-body {
+    color: white;
+    font-family: liberation_sans;
 }
