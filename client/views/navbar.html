@@ -3,12 +3,13 @@
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
+                <h3 class="dustismo tagline">EnviroShop</h3>
                 <a href="#"><img id="logo" src="../assets/icon_blatt.png"></a>
             </div>
             <div class="glyphs">
-                <a class="navIcon" href="#"><span class="glyphicon glyphicon-map-marker"></span></a>
-                <a class="navIcon"><span class="glyphicon glyphicon-search"></span></a>
-                <a class="navIcon" href="#"><span class="glyphicon glyphicon-user"></span></a>
+                <span id="mapButton" class="btn glyphicon glyphicon-map-marker" ng-href="$location.url('/map')"></span></a>
+                <span id="searchButton" class="btn glyphicon glyphicon-search" ng-click="showSearchBar()"></span></a>
+                <span id="userButton" class="btn glyphicon glyphicon-user"></span></a>
             </div>
         </div><!-- /.container-fluid -->
     </nav>

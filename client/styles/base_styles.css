@@ -69,10 +69,20 @@ Start of Navbar Style Rules
     color: black;
 }
 
-.glyphs a span {
+.glyphs span {
     font-size: 3.5em;
+    color: black;
+    vertical-align: inherit;
+    padding: 0 0;
+    line-height: 1;
+    font-weight: normal;
 }
 
+.glyphs {
+    float: right;
+    margin-top: 3px;
+    margin-right: 5px;
+}
 #logo {
     width: 60px;
     height: 60px;
@@ -81,7 +91,7 @@ Start of Navbar Style Rules
 
 .navbar {
     border-color: #2b8742;
-    border-radius: 0px;
+    border-radius: 0;
     border: 0;
     margin-bottom: 0;
 }
@@ -94,6 +104,15 @@ Start of Navbar Style Rules
 .navIcon span {
     width: inherit;
     height: inherit;
+}
+
+.tagline {
+    color: white;
+    float: right;
+    margin-left: 10px;
+    margin-top: 12px;
+    margin-bottom: 0;
+    font-size: 32px;
 }
 
 /******************************
