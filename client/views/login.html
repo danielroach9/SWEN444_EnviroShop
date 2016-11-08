@@ -15,10 +15,11 @@
 
         <!-- Second column is narrow and has the icon and input fields -->
         <div class="col-md-4 opaqueGrayDark">
-            <img class="center-block" src="../assets/icon_blatt.png"/>
+            <img class="center-block crop" src="../assets/icon_blatt.png"/>
 
             <!-- These input fields show up first -->
             <div class="form-group col-xs-8 col-centered" id="inputFieldsMain">
+                <p class="welcome-text">Welcome!</p>
                 <input ng-model="loginCredentials.email" type="text" class="form-control" placeholder="Email">
                 <input ng-model="loginCredentials.pswd" type="password" class="form-control" placeholder="Password">
 
@@ -31,12 +32,13 @@
 
             <!-- The hidden shopper signup fields -->
             <div class="form-group col-xs-8 col-centered" id="inputFieldsShopperSignup">
-                <input ng-model="loginCredentials.firstName" type="text" class="form-control" placeholder="First Name">
-                <input ng-model="loginCredentials.lastName" type="text" class="form-control" placeholder="Last Name">
-                <input ng-model="loginCredentials.email" type="text" class="form-control" placeholder="Email">
-                <input ng-model="loginCredentials.phoneNum" type="text" class="form-control" placeholder="Phone Number ###-###-####">
-                <input ng-model="loginCredentials.pswd1" type="password" class="form-control" placeholder="Password">
-                <input ng-model="loginCredentials.pswd2" type="password" class="form-control" placeholder="Confirm Password">
+                <p class="welcome-text signup">Shopper Signup</p>
+                <input ng-model="loginCredentials.shopperFirstName" type="text" class="form-control" placeholder="First Name">
+                <input ng-model="loginCredentials.shopperLastName" type="text" class="form-control" placeholder="Last Name">
+                <input ng-model="loginCredentials.shopperEmail" type="text" class="form-control" placeholder="Email">
+                <input ng-model="loginCredentials.shopperPhoneNum" type="text" class="form-control" placeholder="Phone Number ###-###-####">
+                <input ng-model="loginCredentials.shopperPswd1" type="password" class="form-control" placeholder="Password">
+                <input ng-model="loginCredentials.shopperPswd2" type="password" class="form-control" placeholder="Confirm Password">
 
                 <!-- The buttons at the bottom -->
                 <div class="col-centered">
@@ -47,12 +49,13 @@
 
             <!-- The hidden business signup fields -->
             <div class="form-group col-xs-8 col-centered" id="inputFieldsBusinessSignup">
-                <input ng-model="loginCredentials.name" type="text" class="form-control" placeholder="Name">
-                <input ng-model="loginCredentials.email" type="text" class="form-control" placeholder="Email">
-                <input ng-model="loginCredentials.phoneNum" type="text" class="form-control" placeholder="Phone Number ###-###-####">
-                <input ng-model="loginCredentials.address" type="text" class="form-control" placeholder="Address">
-                <input ng-model="loginCredentials.pswd1" type="password" class="form-control" placeholder="Password">
-                <input ng-model="loginCredentials.pswd2" type="password" class="form-control" placeholder="Confirm Password">
+                <p class="welcome-text signup">Business Signup</p>
+                <input ng-model="loginCredentials.businessName" type="text" class="form-control" placeholder="Name">
+                <input ng-model="loginCredentials.businessEmail" type="text" class="form-control" placeholder="Email">
+                <input ng-model="loginCredentials.businessPhoneNum" type="text" class="form-control" placeholder="Phone Number ###-###-####">
+                <input ng-model="loginCredentials.businessAddress" type="text" class="form-control" placeholder="Address">
+                <input ng-model="loginCredentials.businessPswd1" type="password" class="form-control" placeholder="Password">
+                <input ng-model="loginCredentials.businessPswd2" type="password" class="form-control" placeholder="Confirm Password">
 
                 <!-- The buttons at the bottom -->
                 <div class="col-centered">
@@ -90,6 +93,22 @@
             </div>
             <div class="modal-body">
                 Your login credentials are incorrect, please try again.
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- This is the signup success confirmation success modal -->
+<div class="modal fade" id="signupSubmitted" tabindex="1" role="dialog" aria-labelledby="successLabel">
+    <div class="modal-dialog liberation_sans" role="document">
+        <div class="modal-content opaqueGrayDark modal-sm">
+            <div class="modal-header">
+                <h4 class="modal-title" id="successLabel">Your account has been created!</h4>
+            </div>
+            <div class="modal-body">
+
+                <!-- The functionality of 'ok' and cancel in this context are the same, return to the main page fresh for the user to log into -->
+                <button ng-click="cancel()" data-dismiss="modal" class="btn btn-primary same-size-button btn-lg">OK!</button>
             </div>
         </div>
     </div>

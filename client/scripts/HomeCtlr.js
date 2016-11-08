@@ -1,6 +1,6 @@
 angular.module('EnviroShop')
     /*.service('DataService', function () {})*/
-    .controller('HomeCtlr', ['$scope', '$location', '$route', function ($scope, $location, $route) {
+    .controller('HomeCtlr', ['$scope', '$location', '$window', function ($scope, $location, $window) {
 
         console.log("HomeCtlr initialized");
 
@@ -40,6 +40,13 @@ angular.module('EnviroShop')
             $('#signupSelect').modal('show');
         };
 
+        /* Show the information submitted modal, confirming to the user that their entry is OK, you know
+         * if we had a backend.  Instead just show the modal and reload the page */
+        $scope.submit = function () {
+            $('#signupSubmitted').modal('show');
+        };
+
+
         /* Show the shopper input fields */
         $scope.signupShopper = function() {
             $('#inputFieldsMain').hide();
@@ -55,6 +62,6 @@ angular.module('EnviroShop')
         /* This function 'cancels' inputting signup information.  It actually just reloads the page *shrug*
          */
         $scope.cancel = function() {
-            $route.reload();
+            $window.location.reload();
         }
     }]);
