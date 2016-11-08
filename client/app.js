@@ -4,7 +4,7 @@ app.config(['$routeProvider', function ($routeProvider) {
 
     $routeProvider
         .when('/', {
-            templateUrl: 'views/home.html',
+            templateUrl: 'views/login.html',
             controller: 'HomeCtlr'
         })
         .when('/businessDashboard',{
@@ -31,7 +31,7 @@ app.config(['$routeProvider', function ($routeProvider) {
             templateUrl: 'views/business_overview.html',
             controller: ''
         })
-        .otherwise({ redirectTo: '/overview'});
+        .otherwise({ redirectTo: '/login'});
 }]);
 
 /*
