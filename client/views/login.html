@@ -1,32 +1,116 @@
-<!-- (CSS) CDN Link to Bootstrap 3.3.7 -->
-<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
-<!-- Link to login Page css -->
-<link rel="stylesheet" type="text/css" href="../styles/base_styles.css">
-
 <!-- Link to login Page css -->
 <link rel="stylesheet" type="text/css" href="../styles/loginPage.css">
 
-<body id="loginBackground">
+<!-- Main background image container, has one row with two columns -->
+<div id="loginBackground">
     <div class="row">
+
+        <!-- First column is wide and has the logo -->
         <div class="col-md-8 gradient">
             <p id="main-logo-left">Enviro<span id="main-logo-right">Shop</span></p>
             <div class="text-box opaqueGrayLight">
-                <p style="color: white">Connecting you to a healthier lifestyle one bite at a time ...</p>
+                <p style="color: white">Connecting you to a healthier lifestyle, one bite at a time...</p>
             </div>
         </div>
 
+        <!-- Second column is narrow and has the icon and input fields -->
         <div class="col-md-4 opaqueGrayDark">
-            <img class="center-block" src="../assets/icon_blatt.png"/>
-            <div class="form-group col-xs-8 col-centered">
-                <input type="text" class="form-control" placeholder="Email" id="usr">
+            <img class="center-block crop" src="../assets/icon_blatt.png"/>
+
+            <!-- These input fields show up first -->
+            <div class="form-group col-xs-8 col-centered" id="inputFieldsMain">
+                <p class="welcome-text">Welcome!</p>
+                <input ng-model="loginCredentials.email" type="text" class="form-control" placeholder="Email">
+                <input ng-model="loginCredentials.pswd" type="password" class="form-control" placeholder="Password">
+
+                <!-- The buttons at the bottom -->
+                <div class="col-centered">
+                    <button ng-click="login()" class="btn btn-primary same-size-button btn-lg">Log In</button>
+                    <button ng-click="signUp()" class="btn btn-primary same-size-button btn-lg pull-right">Sign Up</button>
+                </div>
             </div>
-            <div class="form-group col-xs-8 col-centered">
-                <input type="password" class="form-control" placeholder="Password" id="pwd">
+
+            <!-- The hidden shopper signup fields -->
+            <div class="form-group col-xs-8 col-centered" id="inputFieldsShopperSignup">
+                <p class="welcome-text signup">Shopper Signup</p>
+                <input ng-model="loginCredentials.shopperFirstName" type="text" class="form-control" placeholder="First Name">
+                <input ng-model="loginCredentials.shopperLastName" type="text" class="form-control" placeholder="Last Name">
+                <input ng-model="loginCredentials.shopperEmail" type="text" class="form-control" placeholder="Email">
+                <input ng-model="loginCredentials.shopperPhoneNum" type="text" class="form-control" placeholder="Phone Number ###-###-####">
+                <input ng-model="loginCredentials.shopperPswd1" type="password" class="form-control" placeholder="Password">
+                <input ng-model="loginCredentials.shopperPswd2" type="password" class="form-control" placeholder="Confirm Password">
+
+                <!-- The buttons at the bottom -->
+                <div class="col-centered">
+                    <button ng-click="submit()" class="btn btn-primary same-size-button btn-lg">Submit</button>
+                    <button ng-click="cancel()" class="btn btn-secondary same-size-button btn-lg pull-right">Cancel</button>
+                </div>
             </div>
-            <div class="col-centered">
-                <input class="btn btn-primary" type="submit" value="Log In">
+
+            <!-- The hidden business signup fields -->
+            <div class="form-group col-xs-8 col-centered" id="inputFieldsBusinessSignup">
+                <p class="welcome-text signup">Business Signup</p>
+                <input ng-model="loginCredentials.businessName" type="text" class="form-control" placeholder="Name">
+                <input ng-model="loginCredentials.businessEmail" type="text" class="form-control" placeholder="Email">
+                <input ng-model="loginCredentials.businessPhoneNum" type="text" class="form-control" placeholder="Phone Number ###-###-####">
+                <input ng-model="loginCredentials.businessAddress" type="text" class="form-control" placeholder="Address">
+                <input ng-model="loginCredentials.businessPswd1" type="password" class="form-control" placeholder="Password">
+                <input ng-model="loginCredentials.businessPswd2" type="password" class="form-control" placeholder="Confirm Password">
+
+                <!-- The buttons at the bottom -->
+                <div class="col-centered">
+                    <button ng-click="submit()" class="btn btn-primary same-size-button btn-lg">Submit</button>
+                    <button ng-click="cancel()" class="btn btn-secondary same-size-button btn-lg pull-right">Cancel</button>
+                </div>
             </div>
         </div>
     </div>
-</body>
+</div>
+
+<!-- This is the signup selection modal -->
+<div class="modal fade" id="signupSelect" tabindex="1" role="dialog" aria-labelledby="signupLabel">
+    <div class="modal-dialog liberation_sans" role="document">
+        <div class="modal-content opaqueGrayDark modal-sm">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span style="color: white" aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="signupLabel">Please select the type of account to sign up for</h4>
+            </div>
+            <div class="modal-body">
+                <button ng-click="signupShopper()" data-dismiss="modal" class="btn btn-primary same-size-button btn-lg">Shopper</button>
+                <button ng-click="signupBusiness()" data-dismiss="modal" class="btn btn-primary same-size-button pull-right btn-lg">Business</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- This is the login error modal -->
+<div class="modal fade" id="loginError" tabindex="1" role="dialog" aria-labelledby="modalLabel">
+    <div class="modal-dialog liberation_sans" role="document">
+        <div class="modal-content opaqueGrayDark modal-sm">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span style="color: white" aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="modalLabel">Incorrect Login Credentials</h4>
+            </div>
+            <div class="modal-body">
+                Your login credentials are incorrect, please try again.
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- This is the signup success confirmation success modal -->
+<div class="modal fade" id="signupSubmitted" tabindex="1" role="dialog" aria-labelledby="successLabel">
+    <div class="modal-dialog liberation_sans" role="document">
+        <div class="modal-content opaqueGrayDark modal-sm">
+            <div class="modal-header">
+                <h4 class="modal-title" id="successLabel">Your account has been created!</h4>
+            </div>
+            <div class="modal-body">
+
+                <!-- The functionality of 'ok' and cancel in this context are the same, return to the main page fresh for the user to log into -->
+                <button ng-click="cancel()" data-dismiss="modal" class="btn btn-primary same-size-button btn-lg">OK!</button>
+            </div>
+        </div>
+    </div>
+</div>
+
