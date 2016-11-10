@@ -1,11 +1,8 @@
 .idea/
-<<<<<<< HEAD
 .DS_Store
 client/.DS_Store
 client/assets/.DS_Store
 client/scripts/.DS_Store
 client/styles/.DS_Store
 client/views/.DS_Store
-=======
 node_modules/
->>>>>>> da75c5b39012b14e0bed2aa140a922444014ec55
