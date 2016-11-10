@@ -119,6 +119,14 @@ input, select {
     margin-bottom: 10px;
 }
 
+select {
+    font-family: liberation_sans;
+}
+
+select:invalid {
+    color: gray;
+}
+
 .modal-title, .modal-body {
     color: white;
     font-family: liberation_sans;
