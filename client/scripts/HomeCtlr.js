@@ -33,7 +33,7 @@ angular.module('EnviroShop')
         /* Show the signup modal, allowing the user to choose what type of account they want to create */
         $scope.signUp = function () {
             $scope.showSignupModal();
-        }
+        };
 
         /* Show the signup modal, allowing the user to choose what type of account they want to create */
         $scope.showSignupModal = function () {
@@ -51,13 +51,13 @@ angular.module('EnviroShop')
         $scope.signupShopper = function() {
             $('#inputFieldsMain').hide();
             $('#inputFieldsShopperSignup').show();
-        }
+        };
 
         /* Show the business input fields */
         $scope.signupBusiness = function() {
             $('#inputFieldsMain').hide();
             $('#inputFieldsBusinessSignup').show();
-        }
+        };
 
         /* This function 'cancels' inputting signup information.  It actually just reloads the page *shrug*
          */

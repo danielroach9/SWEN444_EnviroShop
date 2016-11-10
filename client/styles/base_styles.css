@@ -136,11 +136,11 @@ Start of Business Overview Rules
 **********************************/
 
 .overview {
-    width: 30%;
     background-color: #666666;
+    /*display: flex;*/
 }
 
-.overview h2 {
+.overview h4 {
     margin-top: 0;
     margin-bottom: 0;
     align-self: center;
@@ -151,12 +151,11 @@ Start of Business Overview Rules
 }
 
 #busLogo {
-    width: 300px;
+    max-width: 300px;
     max-height: 300px;
     justify-content: center;
     margin: 0 auto;
     display: block;
-    padding-bottom: 15px;
 }
 
 #busName {
@@ -169,6 +168,7 @@ Start of Business Overview Rules
 
 #infoboxes {
     margin-bottom: 15px;
+    margin-top: 15px;
 }
 
 .infobox {
@@ -181,6 +181,11 @@ Start of Business Overview Rules
 
 .infobox p {
     margin-bottom: 3px;
+    text-align: center;
+}
+
+#websiteInfo, #phoneInfo {
+    line-height: 2;
 }
 /*********************************
 
