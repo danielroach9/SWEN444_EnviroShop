@@ -115,7 +115,7 @@ body {
     width: 100px;
 }
 
-input {
+input, select {
     margin-bottom: 10px;
 }
 
