@@ -1,0 +1,20 @@
+#initialBusinessRightSide {
+    background-image: linear-gradient(white, rgb(119,166,130));
+}
+
+.reviews div {
+    background-color: #666666;
+    border-radius: 10px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.panelHeader {
+    font-weight: 400;
+    text-align: center;
+}
+
+#navarrows span {
+    font-size: 2.5em;
+    color: white;
+}

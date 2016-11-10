@@ -2,10 +2,9 @@
 
 <navbar></navbar>
 <div class="row">
-
     <div class="col-md-4 overview">
         <h1 class="liberation-sans" id="busName" ng-model="info.name">{{info.name}}</h1>
-        <img id="busLogo" src="../assets/wegmanlogo.jpg">
+        <img id="busLogo" src="../assets/{{info.name}}logo.jpg">
         <div id="infoboxes">
             <div id="addressInfo" class="infobox" ng-model="info">
                 <p>{{info.street_address}}</p>
@@ -23,7 +22,6 @@
             <button class="btn liberation_sans" style="color: white; background-color: green; width: 40%; text-align: center;">View Users</button>
         </div>
     </div>
-
     <div class="col-md-8" id="initialBusinessRightSide ">
        <div class="col-md-4 busPanel" style="width: 50%;">
             <h1 class="liberation_sans panelHeader">Latest Reviews</h1>
@@ -37,42 +35,9 @@
                     <p>-{{r.user}}</p>
                     <p style="text-align: right;">{{r.date_posted | date: "MM-dd-yy"}}</p>
                 </div>
-               <!--<div style="background-color: #666666; border-radius: 10px;">-->
-                   <!--<p>tHIS PLACE IS GRat.-->
-                       <!--<button class="btn" style="background-color: #666666">-->
-                           <!--<span class="" style="color: white; text-align: right;">&times;</span>-->
-                       <!--</button>-->
-                   <!--</p>-->
-                   <!--<p>-jeffRulez6</p>-->
-                   <!--<p style="text-align: right;">12-01-06</p>-->
-               <!--</div>-->
-               <!--<div style="background-color: #666666; border-radius: 10px;">-->
-                   <!--<p>tHIS PLACE IS GRat.-->
-                       <!--<button class="btn" style="background-color: #666666">-->
-                           <!--<span class="" style="color: white; text-align: right;">&times;</span>-->
-                       <!--</button>-->
-                   <!--</p>-->
-                   <!--<p>-jeffRulez6</p>-->
-                   <!--<p style="text-align: right;">12-01-06</p>-->
-               <!--</div>-->
-               <!--<div style="background-color: #666666; border-radius: 10px;">-->
-                   <!--<p>tHIS PLACE IS GRat.-->
-                       <!--<button class="btn" style="background-color: #666666">-->
-                           <!--<span class="" style="color: white; text-align: right;">&times;</span>-->
-                       <!--</button>-->
-                   <!--</p>-->
-                   <!--<p>-jeffRulez6</p>-->
-                   <!--<p style="text-align: right;">12-01-06</p>-->
-               <!--</div>-->
-               <!--<div style="background-color: #666666; border-radius: 10px;">-->
-                   <!--<p>tHIS PLACE IS GRat.-->
-                       <!--<button class="btn" style="background-color: #666666">-->
-                           <!--<span class="" style="color: white; text-align: right;">&times;</span>-->
-                       <!--</button>-->
-                   <!--</p>-->
-                   <!--<p>-jeffRulez6</p>-->
-                   <!--<p style="text-align: right;">12-01-06</p>-->
-               <!--</div>-->
+               <div style="text-align: center">
+                   <button ng-click="goToReviews()" class="btn" style="background-color: green; color: white;">See All Reviews</button>
+               </div>
            </div>
        </div>
         <div class="col-md-4 busPanel" style="width: 50%;">
@@ -90,7 +55,7 @@
                     <p style="color: white; font-family: liberation_sans;">Add</p>
                     <p style="color: white; font-family: liberation_sans;">Product</p>
                 </button>
-                <button class="btn" style="background-color: green;">
+                <button class="btn" style="background-color: green;" ng-click="goToProducts()">
                     <p style="color: white; font-family: liberation_sans;">See All</p>
                     <p style="color: white; font-family: liberation_sans;">Products</p>
                 </button>
