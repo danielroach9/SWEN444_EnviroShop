@@ -9,7 +9,7 @@ app.config(['$routeProvider', function ($routeProvider) {
         })
         .when('/businessDashboard',{
             templateUrl: 'views/businessdashboard.html',
-            controller: ''
+            controller: 'BusinessPageCtlr'
         })
         .when('/shopperDashboard',{
             templateUrl: 'views/shopperDashboard.html',

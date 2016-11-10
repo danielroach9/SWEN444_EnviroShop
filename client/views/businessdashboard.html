@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -80,3 +81,105 @@
         <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
         <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
     </body>
+=======
+<link rel="stylesheet" type="text/css" href="../styles/businessdashboard.css">
+
+<navbar></navbar>
+<div class="row">
+
+    <div class="col-md-4 overview">
+        <h1 class="liberation-sans" id="busName" ng-model="info.name">{{info.name}}</h1>
+        <img id="busLogo" src="../assets/wegmanlogo.jpg">
+        <div id="infoboxes">
+            <div id="addressInfo" class="infobox" ng-model="info">
+                <p>{{info.street_address}}</p>
+                <p>{{info.city}}, {{info.state}}</p>
+                <p>{{info.zip_code}}</p>
+            </div>
+            <div id="phoneInfo" class="infobox">
+                <p>{{info.phone_num}}</p>
+            </div>
+            <div id="websiteInfo" class="infobox">
+                <p><a href="http://{{info.website}}">{{info.website}}</a></p>
+            </div>
+        </div>
+        <div style="width: 100%; margin: 0 auto; text-align: center">
+            <button class="btn liberation_sans" style="color: white; background-color: green; width: 40%; text-align: center;">View Users</button>
+        </div>
+    </div>
+
+    <div class="col-md-8" id="initialBusinessRightSide ">
+       <div class="col-md-4 busPanel" style="width: 50%;">
+            <h1 class="liberation_sans panelHeader">Latest Reviews</h1>
+           <div class="reviews">
+                <div ng-repeat="r in fiveReviews" style="background-color: #666666; border-radius: 10px;">
+                    <p>{{r.content}}
+                        <button class="btn" style="background-color: #666666">
+                            <span class="" style="color: white; text-align: right;">&times;</span>
+                        </button>
+                    </p>
+                    <p>-{{r.user}}</p>
+                    <p style="text-align: right;">{{r.date_posted | date: "MM-dd-yy"}}</p>
+                </div>
+               <!--<div style="background-color: #666666; border-radius: 10px;">-->
+                   <!--<p>tHIS PLACE IS GRat.-->
+                       <!--<button class="btn" style="background-color: #666666">-->
+                           <!--<span class="" style="color: white; text-align: right;">&times;</span>-->
+                       <!--</button>-->
+                   <!--</p>-->
+                   <!--<p>-jeffRulez6</p>-->
+                   <!--<p style="text-align: right;">12-01-06</p>-->
+               <!--</div>-->
+               <!--<div style="background-color: #666666; border-radius: 10px;">-->
+                   <!--<p>tHIS PLACE IS GRat.-->
+                       <!--<button class="btn" style="background-color: #666666">-->
+                           <!--<span class="" style="color: white; text-align: right;">&times;</span>-->
+                       <!--</button>-->
+                   <!--</p>-->
+                   <!--<p>-jeffRulez6</p>-->
+                   <!--<p style="text-align: right;">12-01-06</p>-->
+               <!--</div>-->
+               <!--<div style="background-color: #666666; border-radius: 10px;">-->
+                   <!--<p>tHIS PLACE IS GRat.-->
+                       <!--<button class="btn" style="background-color: #666666">-->
+                           <!--<span class="" style="color: white; text-align: right;">&times;</span>-->
+                       <!--</button>-->
+                   <!--</p>-->
+                   <!--<p>-jeffRulez6</p>-->
+                   <!--<p style="text-align: right;">12-01-06</p>-->
+               <!--</div>-->
+               <!--<div style="background-color: #666666; border-radius: 10px;">-->
+                   <!--<p>tHIS PLACE IS GRat.-->
+                       <!--<button class="btn" style="background-color: #666666">-->
+                           <!--<span class="" style="color: white; text-align: right;">&times;</span>-->
+                       <!--</button>-->
+                   <!--</p>-->
+                   <!--<p>-jeffRulez6</p>-->
+                   <!--<p style="text-align: right;">12-01-06</p>-->
+               <!--</div>-->
+           </div>
+       </div>
+        <div class="col-md-4 busPanel" style="width: 50%;">
+            <h1 class="liberation_sans panelHeader">Products</h1>
+            <div style="border-style: dashed; background-color: white; border-color: gray;">
+                <h2 id="draganddrop">Drag and Drop Photos Here, or Click Here to Upload</h2>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Name">
+                <input type="text" class="form-control" placeholder="$ Price">
+                <textarea class="form-control" placeholder="Description"></textarea>
+            </div>
+            <div>
+                <button class="btn" style="background-color: green;">
+                    <p style="color: white; font-family: liberation_sans;">Add</p>
+                    <p style="color: white; font-family: liberation_sans;">Product</p>
+                </button>
+                <button class="btn" style="background-color: green;">
+                    <p style="color: white; font-family: liberation_sans;">See All</p>
+                    <p style="color: white; font-family: liberation_sans;">Products</p>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+>>>>>>> da75c5b39012b14e0bed2aa140a922444014ec55

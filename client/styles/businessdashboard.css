@@ -1,0 +1,37 @@
+#initialBusinessRightSide {
+    background-image: linear-gradient(white, rgb(226,237,229));
+}
+
+.busPanel {
+    background-image: linear-gradient(white, rgb(119,166,130));
+}
+
+.panelHeader {
+    font-weight: 300;
+    text-align: center;
+}
+
+::-webkit-input-placeholder {
+    text-align: center;
+    font-family: liberation_sans;
+}
+
+textarea {
+    resize: none;
+}
+
+.form-group input {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 50px;
+}
+
+.form-group textarea {
+    border-radius: 20px;
+}
+
+#draganddrop {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+}
