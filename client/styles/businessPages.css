@@ -35,3 +35,65 @@ textarea {
     margin-bottom: 25px;
     text-align: center;
 }
+
+.productImage {
+    max-height: 130px;
+    max-width: 130px;
+    border-radius: 100%;
+    display: block;
+}
+
+.col-md-8 {
+    padding-bottom: 100%;
+    margin-bottom: -100%;
+    overflow-y: hidden;
+}
+
+.col-md-4 {
+    padding-bottom: 100%;
+    margin-bottom: -100%;
+    overflow-y: hidden;
+}
+
+.productContainer {
+    overflow: auto;
+}
+
+
+.productImageDiv {
+    float: left;
+    padding-left: 25px;
+    padding-top: 10px;
+}
+
+.productInfoDiv {
+    margin-left: 200px;
+    margin-right: 20px;
+    padding-top: 20px;
+}
+
+.ratingLeaf {
+    max-width: 30px;
+    max-height: 30px;
+}
+
+.productInfoDiv p {
+    color: white;
+    font-family: liberation_sans;
+}
+
+.selectedProductValueCell {
+    width: 100%;
+}
+
+textarea.form-control {
+    height: 100px;
+}
+
+.productImageInModal {
+    max-height: 200px;
+    max-width: 200px;
+    border-radius: 100%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
