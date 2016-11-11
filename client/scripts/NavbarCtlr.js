@@ -6,11 +6,14 @@ angular.module('EnviroShop')
         var path = $location.path();
 
         $scope.showSearchBar = function () {
-            console.log('Would have opened the search bar');
+            $location.url("/search");
         };
 
         $scope.showFaqs = function() {
             $location.url("/faq");
+        }
+        $scope.showMap = function() {
+            $location.url("/map");
         }
 
 
