@@ -36,11 +36,15 @@
                         <span><img class="ratingLeaf" ng-src="{{p.rating >= 5 ? '../assets/review_leaf_filled.png' : '../assets/review_leaf_empty.png'}}"></span>
                     </div>
                 </div>
+                <button class="btn pull-right" style="background-color: #666666">
+                    <span class="" style="color: white; text-align: right;">&times;</span>
+                </button>
                 <div class="productInfoDiv">
                     <p>{{p.name}}</p>
                     <p>$ {{p.price}}<span ng-show="p.hasUnit"> / {{p.unit}}</span></p>
                     <p>{{p.description}}</p>
                 </div>
+                
             </div>
         </div>
         <div id="navarrows" style="width: 100%; margin: 0 auto; text-align: center">
