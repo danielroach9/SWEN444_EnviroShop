@@ -1,8 +1,8 @@
 .idea/
+node_modules
 .DS_Store
 client/.DS_Store
 client/assets/.DS_Store
 client/scripts/.DS_Store
 client/styles/.DS_Store
 client/views/.DS_Store
-node_modules/

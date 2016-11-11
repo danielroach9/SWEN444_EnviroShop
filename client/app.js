@@ -19,9 +19,13 @@ app.config(['$routeProvider', function ($routeProvider) {
             templateUrl: 'views/shopperProfileview.html',
             controller: ''
         })
-        .when('/businessReviews', {
+        .when('/business_reviews', {
             templateUrl: 'views/businessreviews.html',
-            controller: ''
+            controller: 'BusinessPageCtlr'
+        })
+        .when('/business_products', {
+            templateUrl: 'views/businessproducts.html',
+            controller: 'BusinessPageCtlr'
         })
         .when('/productview', {
             templateUrl: 'views/productview.html',
@@ -45,6 +49,10 @@ app.config(['$routeProvider', function ($routeProvider) {
         })
         .when('/overview', {
             templateUrl: 'views/business_overview.html',
+            controller: ''
+        })
+        .when('/faq', {
+            templateUrl: 'views/faq.html',
             controller: ''
         })
         .otherwise({ redirectTo: '/'});
