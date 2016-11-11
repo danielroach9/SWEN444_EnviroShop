@@ -1,5 +1,5 @@
 angular.module('EnviroShop')
-    .controller('NavbarCtlr', ['$scope', '$location', function ($scope, $location) {
+    .controller('NavbarCtlr', ['$rootScope', '$scope', '$location', function ($rootScope, $scope, $location) {
 
         console.log('NavbarCtlr initialized');
 
@@ -9,6 +9,11 @@ angular.module('EnviroShop')
             console.log('Would have opened the search bar');
         };
 
+        $scope.showFaqs = function() {
+            $location.url("/faq");
+        }
+
+
 /*        if(path.includes('productview')) {
             $('#userButton').css('color', 'white');
         }
@@ -16,4 +21,9 @@ angular.module('EnviroShop')
         else {
             console.log("path doesn't contain productview in it");
         }*/
+
+        /* Always go to the users profile type */
+        $scope.goToProfile = function() {
+            $location.url($rootScope.profileLink);
+        }
     }]);

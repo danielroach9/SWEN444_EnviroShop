@@ -24,7 +24,7 @@
     "name": "Chocolate Flavored Syrup",
     "price": 1.99,
     "hasUnit": false,
-    "unit": "N/A",
+    "unit": "None",
     "rating": 3,
     "description": "Gluten free. Fat free. Low sodium. The chocolate craving solution. Excellent as a topping for ice cream and desserts. Remember, your satisfaction is always guaranteed with Wegmans brand products",
     "deleted": false
@@ -44,7 +44,7 @@
     "name": "Fall Signature Bouquet",
     "price": 20.00,
     "hasUnit": false,
-    "unit": "N/A",
+    "unit": "None",
     "rating": 4,
     "description": "(vase not included)",
     "deleted": false
@@ -54,49 +54,9 @@
     "name": "Mixed Berries, Family Pack",
     "price": 8.49,
     "hasUnit": false,
-    "unit": "N/A",
+    "unit": "None",
     "rating": 5,
     "description": "Make foods like mixed berries, part of your plan for heart healthful eating. Strawberries, blackberries, blueberries & raspberries. Just picked and quickly frozen",
     "deleted": false
   }
-//  {
-//    "id": 7,
-//    "name": "Bad Beer",
-//    "price": 12.99,
-//    "hasUnit": true,
-//    "unit": "12 pk",
-//    "rating": 4,
-//    "description": "Awesome quadruple hopped crazy flavor.",
-//    "deleted": false
-//  },
-//  {
-//    "id": 8,
-//    "name": "Bad Beer",
-//    "price": 12.99,
-//    "hasUnit": true,
-//    "unit": "12 pk",
-//    "rating": 4,
-//    "description": "Awesome quadruple hopped crazy flavor.",
-//    "deleted": false
-//  },
-//  {
-//    "id": 9,
-//    "name": "Bad Beer",
-//    "price": 12.99,
-//    "hasUnit": true,
-//    "unit": "12 pk",
-//    "rating": 4,
-//    "description": "Awesome quadruple hopped crazy flavor.",
-//    "deleted": false
-//  },
-//  {
-//    "id": 10,
-//    "name": "Bad Beer",
-//    "price": 12.99,
-//    "hasUnit": true,
-//    "unit": "12 pk",
-//    "rating": 4,
-//    "description": "Awesome quadruple hopped crazy flavor.",
-//    "deleted": false
-//  }
 ]

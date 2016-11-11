@@ -40,6 +40,7 @@ angular.module('EnviroShop')
             console.log('REST call for logo not set up');
         });
 
+
     $scope.goToReviews = function () {
         $location.url('/business_reviews');
     };
@@ -81,6 +82,7 @@ angular.module('EnviroShop')
                 }
 
             }, function errorCallback(response) {
+                console.log(response);
                 console.log('REST call for products not set up');
             });
     }

@@ -47,3 +47,23 @@ textarea {
     margin-bottom: -100%;
     overflow-y: hidden;
 }
+
+.col-centered {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.same-size-button {
+    width: 100px;
+    height: 65px;
+}
+
+.button-text {
+    color: white;
+    font-family: liberation_sans;
+}
+
+.reviewFeed {
+    font-family: liberation_sans;
+    color: white;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="../styles/userdashboard.css">
+
+
+<navbar></navbar>
+<body>
+<div class="container" ng-model="userFeed">
+
+
+    <br>
+    <div class="jumbotron store">
+        <div class="container" ng-model="userFeed">
+            <h2>{{userFeed[0].name}}</h2>
+            <img style="max-width: 160px; max-height: 100px;" ng-src="{{userFeed[0].image}}"/>
+            <p>Description: {{userFeed[0].description}}</p>
+        </div>
+    </div>
+    <br>
+    <div class="jumbotron store">
+        <div class="container" ng-model="userFeed">
+            <h2>{{userFeed[1].name}}</h2>
+            <img style="max-width: 160px; max-height: 100px;" ng-src="{{userFeed[1].image}}"/>
+            <p>Description: {{userFeed[1].description}}</p>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
