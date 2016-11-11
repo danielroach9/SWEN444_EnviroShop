@@ -15,4 +15,8 @@ angular.module('EnviroShop').service('DataService', ['$http', function($http) {
         return $http.get(urlBaseAssets + '/' + 'wegmanslogo.jpg');
     };
 
+    this.getBusinessProducts = function (business) {
+      return $http.get(urlBaseUtil + '/' + 'wegmansproducts.json');
+    };
+
 }]);
