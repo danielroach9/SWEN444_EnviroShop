@@ -63,5 +63,7 @@ angular.module('EnviroShop')
          */
         $scope.cancel = function() {
             $window.location.reload();
-        }
+        };
+
+
     }]);

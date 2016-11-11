@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "name": "Best Potato",
+    "price": 8.99,
+    "hasUnit": true,
+    "unit": "lb",
+    "rating": 4,
+    "description": "It's a potato.",
+    "deleted": false
+  },
+  {
+    "id": 2,
+    "name": "Bad Beer",
+    "price": 12.99,
+    "hasUnit": true,
+    "unit": "12 pk",
+    "rating": 4,
+    "description": "Awesome quadruple hopped crazy flavor.",
+    "deleted": false
+  },
+  {
+    "id": 3,
+    "name": "Bad Beer",
+    "price": 12.99,
+    "hasUnit": true,
+    "unit": "12 pk",
+    "rating": 4,
+    "description": "Awesome quadruple hopped crazy flavor.",
+    "deleted": false
+  },
+  {
+    "id": 4,
+    "name": "Bad Beer",
+    "price": 12.99,
+    "hasUnit": true,
+    "unit": "12 pk",
+    "rating": 4,
+    "description": "Awesome quadruple hopped crazy flavor.",
+    "deleted": false
+  },
+  {
+    "id": 5,
+    "name": "Bad Beer",
+    "price": 12.99,
+    "hasUnit": true,
+    "unit": "12 pk",
+    "rating": 4,
+    "description": "Awesome quadruple hopped crazy flavor.",
+    "deleted": false
+  },
+  {
+    "id": 6,
+    "name": "Bad Beer",
+    "price": 12.99,
+    "hasUnit": true,
+    "unit": "12 pk",
+    "rating": 4,
+    "description": "Awesome quadruple hopped crazy flavor.",
+    "deleted": false
+  },
+  {
+    "id": 7,
+    "name": "Bad Beer",
+    "price": 12.99,
+    "hasUnit": true,
+    "unit": "12 pk",
+    "rating": 4,
+    "description": "Awesome quadruple hopped crazy flavor.",
+    "deleted": false
+  },
+  {
+    "id": 8,
+    "name": "Bad Beer",
+    "price": 12.99,
+    "hasUnit": true,
+    "unit": "12 pk",
+    "rating": 4,
+    "description": "Awesome quadruple hopped crazy flavor.",
+    "deleted": false
+  },
+  {
+    "id": 9,
+    "name": "Bad Beer",
+    "price": 12.99,
+    "hasUnit": true,
+    "unit": "12 pk",
+    "rating": 4,
+    "description": "Awesome quadruple hopped crazy flavor.",
+    "deleted": false
+  },
+  {
+    "id": 10,
+    "name": "Bad Beer",
+    "price": 12.99,
+    "hasUnit": true,
+    "unit": "12 pk",
+    "rating": 4,
+    "description": "Awesome quadruple hopped crazy flavor.",
+    "deleted": false
+  }
+]

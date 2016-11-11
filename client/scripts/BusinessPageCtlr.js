@@ -5,6 +5,7 @@ angular.module('EnviroShop')
     console.log('BusinessPageCtlr initialized');
 
     $scope.info = null;
+    $scope.pic = null;
     $scope.fiveReviews = [];
     $scope.reviews = [];
 
@@ -25,5 +26,20 @@ angular.module('EnviroShop')
             console.log('REST call for reviews not set up');
         });
 
+    DataService.getBusinessLogo('bis')
+        .then(function successCallback(response) {
+
+            $scope.pic = response.data;
+        }, function errorCallback(response) {
+            console.log('REST call for logo not set up');
+        });
+
+    $scope.goToReviews = function () {
+        $location.url('/business_reviews');
+    };
+
+    $scope.goToProducts = function () {
+        $location.url('/business_products');
+    };
 
 }]);

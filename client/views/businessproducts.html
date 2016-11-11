@@ -1,5 +1,4 @@
-<link rel="stylesheet" type="text/css" href="../styles/businessreviews.css">
-
+<link rel="stylesheet" type="text/css" href="../styles/businessPages.css">
 <navbar></navbar>
 <div class="row">
     <div class="col-md-4 overview">
@@ -24,17 +23,11 @@
         <div class="fill"></div>
     </div>
 
-    <div class="col-md-8" id="initialBusinessRightSide">
-        <h1 class="liberation_sans panelHeader">Latest Reviews</h1>
-        <div class="reviews">
-            <div ng-repeat="r in fiveReviews" style="background-color: #666666; border-radius: 10px;">
-                <p>{{r.content}}
-                    <button class="btn" style="background-color: #666666">
-                        <span class="" style="color: white; text-align: right;">&times;</span>
-                    </button>
-                </p>
-                <p>-{{r.user}}</p>
-                <p style="text-align: right;">{{r.date_posted | date: "MM-dd-yy"}}</p>
+    <div class="col-md-8 busPanel">
+        <h1 class="liberation_sans panelHeader">Products</h1>
+        <div class="products">
+            <div ng-repeat="p in fiveProducts" style="background: #666666; border-radius: 10px;">
+
             </div>
         </div>
         <div id="navarrows" style="width: 100%; margin: 0 auto; text-align: center">
