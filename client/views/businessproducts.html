@@ -25,7 +25,7 @@
     <div class="col-md-8 busPanel">
         <h1 class="liberation_sans panelHeader">Products</h1>
         <div class="products" style="margin: 0 auto; align-content: center">
-            <div id="product{{p.id}}" class="productContainer" ng-repeat="p in threeProducts" ng-model="p" style="background: #666666; border-radius: 10px; margin-bottom: 10px; width: 90%; margin-left: auto; margin-right: auto;" ng-dblclick="selectProduct(p)">
+            <div id="product{{p.id}}" class="productContainer" ng-repeat="p in threeProducts" ng-model="p" style="background: #666666; border-radius: 10px; margin-bottom: 10px; width: 90%; margin-left: auto; margin-right: auto;" ng-dblclick="selectProduct(p, true)">
                 <div class="productImageDiv">
                     <img class="productImage" ng-src="{{p.imgLink}}">
                     <div>
@@ -36,7 +36,7 @@
                         <span><img class="ratingLeaf" ng-src="{{p.rating >= 5 ? '../assets/review_leaf_filled.png' : '../assets/review_leaf_empty.png'}}"></span>
                     </div>
                 </div>
-                <button class="btn pull-right" style="background-color: #666666">
+                <button class="btn pull-right" style="background-color: #666666" ng-click="selectProduct(p, false)"  data-toggle="modal" data-target="#productDeletionModal">
                     <span class="" style="color: white; text-align: right;">&times;</span>
                 </button>
                 <div class="productInfoDiv">

@@ -70,9 +70,12 @@ angular.module('EnviroShop')
         return '/assets/' + bis + '_' + ltrs.toLowerCase() + '.jpg';
     };
 
-    $scope.selectProduct = function (product) {
+    $scope.selectProduct = function (product, openModal) {
         $scope.selectedProduct = product;
-        $('#productDetailModal').modal('show');
+
+        if(openModal) {
+            $('#productDetailModal').modal('show');
+        }
     };
 
     $scope.deleteProduct = function (p) {
