@@ -17,12 +17,12 @@ angular.module('EnviroShop')
             if ($scope.loginCredentials.email == "wegmans@gmail.com" && $scope.loginCredentials.pswd == "123456") {
                 //$scope.nextPage =
                 $location.url('/businessDashboard');
-                $rootScope.homeLink = '#/businessDashboard/';
+                $rootScope.homeLink = '#/businessDashboard';
                 $rootScope.profileLink = '/businessDashboard';
             }
             else if ($scope.loginCredentials.email == "enviroshopUser@gmail.com" && $scope.loginCredentials.pswd == "123456") {
                 $location.url('/userDashboard');
-                $rootScope.homeLink = '#/userDashboard/';
+                $rootScope.homeLink = '#/userDashboard';
                 $rootScope.profileLink = '/shopperProfileview';
             }
 
