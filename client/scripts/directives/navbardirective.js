@@ -5,7 +5,7 @@ angular.module('EnviroShop').directive('navbar', function () {
         restrict: 'E',
         templateUrl: '../../views/navbar.html',
         controller: 'NavbarCtlr',
-        link: function postLink(scope, element, attrs) {
+        link: function postLink(rootScope, scope, element, attrs) {
 
         }
     };

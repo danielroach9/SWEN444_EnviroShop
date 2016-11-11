@@ -1,0 +1,21 @@
+[
+  {
+    "id": 1,
+    "name": "Wegmans",
+    "street_address": "1 Main St",
+    "city": "Rochester",
+    "state": "NY",
+    "zip_code": "14607",
+    "phone_num": "585-123-4567",
+    "website": "wegmans.com",
+    "image" : "../assets/wegmanslogo.jpg",
+    "description" : "Here at wegmans we provide our customer with a variety of food options. We ensure that each shopper gets the most environmentally friendly foods possible. Come visit our store to see for yourself!"
+  },
+  {
+    "id": 2,
+    "name": "Celery",
+    "image": "../assets/celery_example.jpg",
+    "description": "This delectable vegetable is currently offered by Wegmans. It can be bought in bundles or singles to enjoy on the go."
+  }
+
+]

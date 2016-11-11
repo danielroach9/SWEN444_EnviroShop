@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Premium Russet Idaho Potatoes",
+    "price": 3.69,
+    "hasUnit": true,
+    "unit": "5 lb",
+    "rating": 4,
+    "description": "If bakes potatoes are your preference, choose none other then Russet. These large dense spuds have think skins that hold up to hot oven temperatures.",
+    "deleted": false
+  },
+  {
+    "id": 2,
+    "name": "Bias Cut Carrots",
+    "price": 7.99,
+    "hasUnit": true,
+    "unit": "lb",
+    "rating": 4,
+    "description": "Great for 2-3 People Washed & Ready to Use",
+    "deleted": false
+  },
+  {
+    "id": 3,
+    "name": "Chocolate Flavored Syrup",
+    "price": 1.99,
+    "hasUnit": false,
+    "unit": "None",
+    "rating": 3,
+    "description": "Gluten free. Fat free. Low sodium. The chocolate craving solution. Excellent as a topping for ice cream and desserts. Remember, your satisfaction is always guaranteed with Wegmans brand products",
+    "deleted": false
+  },
+  {
+    "id": 4,
+    "name": "Italian Sparkling Mineral Water",
+    "price": 7.99,
+    "hasUnit": true,
+    "unit": "12 pk",
+    "rating": 4,
+    "description": "We're proud of this product and we hope you'll agree. Remember, your satisfaction is always guaranteed with Wegmans brand products.",
+    "deleted": false
+  },
+  {
+    "id": 5,
+    "name": "Fall Signature Bouquet",
+    "price": 20.00,
+    "hasUnit": false,
+    "unit": "None",
+    "rating": 4,
+    "description": "(vase not included)",
+    "deleted": false
+  },
+  {
+    "id": 6,
+    "name": "Mixed Berries, Family Pack",
+    "price": 8.49,
+    "hasUnit": false,
+    "unit": "None",
+    "rating": 5,
+    "description": "Make foods like mixed berries, part of your plan for heart healthful eating. Strawberries, blackberries, blueberries & raspberries. Just picked and quickly frozen",
+    "deleted": false
+  }
+]

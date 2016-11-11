@@ -3,10 +3,9 @@
 
 <navbar></navbar>
 <div class="row">
-
     <div class="col-md-4 overview">
         <h1 class="liberation-sans" id="busName" ng-model="info.name">{{info.name}}</h1>
-        <img id="busLogo" src="../assets/wegmanlogo.jpg">
+        <img id="busLogo" src="../assets/{{info.name}}logo.jpg">
         <div id="infoboxes">
             <div id="addressInfo" class="infobox" ng-model="info">
                 <p>{{info.street_address}}</p>
@@ -21,59 +20,25 @@
             </div>
         </div>
         <div style="width: 100%; margin: 0 auto; text-align: center">
-            <button class="btn liberation_sans" style="color: white; background-color: green; width: 40%; text-align: center;">View Users</button>
+            <button class="btn btn-primary">View Users</button>
         </div>
     </div>
-
     <div class="col-md-8" id="initialBusinessRightSide ">
        <div class="col-md-4 busPanel" style="width: 50%;">
             <h1 class="liberation_sans panelHeader">Latest Reviews</h1>
            <div class="reviews">
                 <div ng-repeat="r in fiveReviews" style="background-color: #666666; border-radius: 10px;">
-                    <p>{{r.content}}
-                        <button class="btn" style="background-color: #666666">
+                    <p class="reviewFeed">{{r.content}}
+                        <button class="btn pull-right" style="background-color: #666666">
                             <span class="" style="color: white; text-align: right;">&times;</span>
                         </button>
                     </p>
-                    <p>-{{r.user}}</p>
-                    <p style="text-align: right;">{{r.date_posted | date: "MM-dd-yy"}}</p>
+                    <p class="reviewFeed">-{{r.user}}</p>
+                    <p class="reviewFeed" style="text-align: right;">{{r.date_posted | date: "MM-dd-yy"}}</p>
                 </div>
-               <!--<div style="background-color: #666666; border-radius: 10px;">-->
-                   <!--<p>tHIS PLACE IS GRat.-->
-                       <!--<button class="btn" style="background-color: #666666">-->
-                           <!--<span class="" style="color: white; text-align: right;">&times;</span>-->
-                       <!--</button>-->
-                   <!--</p>-->
-                   <!--<p>-jeffRulez6</p>-->
-                   <!--<p style="text-align: right;">12-01-06</p>-->
-               <!--</div>-->
-               <!--<div style="background-color: #666666; border-radius: 10px;">-->
-                   <!--<p>tHIS PLACE IS GRat.-->
-                       <!--<button class="btn" style="background-color: #666666">-->
-                           <!--<span class="" style="color: white; text-align: right;">&times;</span>-->
-                       <!--</button>-->
-                   <!--</p>-->
-                   <!--<p>-jeffRulez6</p>-->
-                   <!--<p style="text-align: right;">12-01-06</p>-->
-               <!--</div>-->
-               <!--<div style="background-color: #666666; border-radius: 10px;">-->
-                   <!--<p>tHIS PLACE IS GRat.-->
-                       <!--<button class="btn" style="background-color: #666666">-->
-                           <!--<span class="" style="color: white; text-align: right;">&times;</span>-->
-                       <!--</button>-->
-                   <!--</p>-->
-                   <!--<p>-jeffRulez6</p>-->
-                   <!--<p style="text-align: right;">12-01-06</p>-->
-               <!--</div>-->
-               <!--<div style="background-color: #666666; border-radius: 10px;">-->
-                   <!--<p>tHIS PLACE IS GRat.-->
-                       <!--<button class="btn" style="background-color: #666666">-->
-                           <!--<span class="" style="color: white; text-align: right;">&times;</span>-->
-                       <!--</button>-->
-                   <!--</p>-->
-                   <!--<p>-jeffRulez6</p>-->
-                   <!--<p style="text-align: right;">12-01-06</p>-->
-               <!--</div>-->
+               <div style="text-align: center">
+                   <button ng-click="goToReviews()" class="btn btn-primary" style="background-color: green; color: white;">See All Reviews</button>
+               </div>
            </div>
        </div>
         <div class="col-md-4 busPanel" style="width: 50%;">
@@ -87,16 +52,16 @@
                 <textarea class="form-control" placeholder="Description"></textarea>
             </div>
             <div>
-                <button class="btn" style="background-color: green;">
-                    <p style="color: white; font-family: liberation_sans;">Add</p>
-                    <p style="color: white; font-family: liberation_sans;">Product</p>
-                </button>
-                <button class="btn" style="background-color: green;">
-                    <p style="color: white; font-family: liberation_sans;">See All</p>
-                    <p style="color: white; font-family: liberation_sans;">Products</p>
-                </button>
+                <div class="col-centered">
+                    <button class="btn btn-primary same-size-button">
+                        <p class="button-text">Add Product</p>
+                    </button>
+                    <button class="btn btn-primary same-size-button" style="margin-left: 10px" ng-click="goToProducts()">
+                        <p class="button-text">See All</p>
+                        <p class="button-text">Products</p>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 </div>
->>>>>>> da75c5b39012b14e0bed2aa140a922444014ec55

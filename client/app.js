@@ -15,11 +15,23 @@ app.config(['$routeProvider', function ($routeProvider) {
             templateUrl: 'views/shopperDashboard.html',
             controller: ''
         })
-        .when('/businessReviews', {
-            templateUrl: 'views/businessreviews.html',
+        .when('/shopperProfileview',{
+            templateUrl: 'views/shopperProfileview.html',
             controller: ''
         })
-        .when('/productview', {
+        .when('/business_reviews', {
+            templateUrl: 'views/businessreviews.html',
+            controller: 'BusinessPageCtlr'
+        })
+        .when('/business_products', {
+            templateUrl: 'views/businessproducts.html',
+            controller: 'BusinessPageCtlr'
+        })
+        .when('/map', {
+            templateUrl: 'views/map.html',
+            controller: ''
+        })
+        .when('/product', {
             templateUrl: 'views/productview.html',
             controller: ''
         })
@@ -43,7 +55,15 @@ app.config(['$routeProvider', function ($routeProvider) {
             templateUrl: 'views/business_overview.html',
             controller: ''
         })
-        .otherwise({ redirectTo: '/login'});
+        .when('/faq', {
+            templateUrl: 'views/faq.html',
+            controller: ''
+        })
+        .when('/userDashboard',{
+            templateUrl: 'views/userdashboard.html',
+            controller: 'UserPageCtlr'
+        })
+        .otherwise({ redirectTo: '/'});
 }]);
 
 /*

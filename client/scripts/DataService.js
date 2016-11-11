@@ -12,7 +12,15 @@ angular.module('EnviroShop').service('DataService', ['$http', function($http) {
     };
 
     this.getBusinessLogo = function (business) {
-        return $http.get(urlBaseAssets + '/' + 'wegmanlogo.jpg');
+        return $http.get(urlBaseAssets + '/' + 'wegmanslogo.jpg');
     };
 
+    this.getBusinessProducts = function (business) {
+      return $http.get(urlBaseUtil + '/' + 'wegmansproducts.json');
+    };
+
+    this.getUserFeed = function(business) {
+        return $http.get(urlBaseUtil + '/' + 'userfeed.json');
+
+    }
 }]);

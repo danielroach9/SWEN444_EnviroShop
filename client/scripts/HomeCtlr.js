@@ -1,6 +1,6 @@
 angular.module('EnviroShop')
     /*.service('DataService', function () {})*/
-    .controller('HomeCtlr', ['$scope', '$location', '$window', function ($scope, $location, $window) {
+    .controller('HomeCtlr', ['$rootScope', '$scope', '$location', '$window', function ($rootScope, $scope, $location, $window) {
 
         console.log("HomeCtlr initialized");
 
@@ -8,6 +8,7 @@ angular.module('EnviroShop')
         $('#inputFieldsShopperSignup').hide();
         $('#inputFieldsBusinessSignup').hide();
         $scope.loginCredentials = {};
+        $rootScope.homeLink = '#/';
 
         /* This function 'logs in' a user.  There are two hardcoded acceptable inputs for a business and a shopper'
            it's really just two links to other web-pages
@@ -16,9 +17,13 @@ angular.module('EnviroShop')
             if ($scope.loginCredentials.email == "wegmans@gmail.com" && $scope.loginCredentials.pswd == "123456") {
                 //$scope.nextPage =
                 $location.url('/businessDashboard');
+                $rootScope.homeLink = '#/businessDashboard/';
+                $rootScope.profileLink = '/businessDashboard';
             }
             else if ($scope.loginCredentials.email == "enviroshopUser@gmail.com" && $scope.loginCredentials.pswd == "123456") {
-                $location.url('/shopperDashboard');
+                $location.url('/userDashboard');
+                $rootScope.homeLink = '#/userDashboard/';
+                $rootScope.profileLink = '/shopperProfileview';
             }
 
             /* Let the user know the sign in information isn't correct */
@@ -63,5 +68,7 @@ angular.module('EnviroShop')
          */
         $scope.cancel = function() {
             $window.location.reload();
-        }
+        };
+
+
     }]);
