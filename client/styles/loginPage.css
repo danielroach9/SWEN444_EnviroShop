@@ -133,5 +133,6 @@ select:invalid {
 }
 
 .crop {
-    margin: -20px 68.323px -80px 68.323px;
+    margin-top: -20px;
+    margin-bottom: -80px;
 }
