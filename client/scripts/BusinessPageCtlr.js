@@ -34,6 +34,7 @@ angular.module('EnviroShop')
             console.log('REST call for logo not set up');
         });
 
+
     $scope.goToReviews = function () {
         $location.url('/business_reviews');
     };

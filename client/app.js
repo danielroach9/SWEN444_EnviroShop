@@ -55,6 +55,10 @@ app.config(['$routeProvider', function ($routeProvider) {
             templateUrl: 'views/faq.html',
             controller: ''
         })
+        .when('/userDashboard',{
+            templateUrl: 'views/userdashboard.html',
+            controller: 'UserPageCtlr'
+        })
         .otherwise({ redirectTo: '/'});
 }]);
 
