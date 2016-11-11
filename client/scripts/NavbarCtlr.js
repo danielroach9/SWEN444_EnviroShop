@@ -9,6 +9,11 @@ angular.module('EnviroShop')
             console.log('Would have opened the search bar');
         };
 
+        $scope.showFaqs = function() {
+            $location.url("/faq");
+        }
+
+
 /*        if(path.includes('productview')) {
             $('#userButton').css('color', 'white');
         }
