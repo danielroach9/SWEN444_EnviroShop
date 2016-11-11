@@ -1,5 +1,4 @@
 <link rel="stylesheet" type="text/css" href="../styles/businessreviews.css">
-
 <navbar></navbar>
 <div class="row">
     <div class="col-md-4 overview">
@@ -26,10 +25,10 @@
     <div class="col-md-8" id="initialBusinessRightSide">
         <h1 class="liberation_sans panelHeader">Latest Reviews</h1>
         <div class="reviews">
-            <div ng-repeat="r in fiveReviews" style="background-color: #666666; border-radius: 10px;">
+            <div class="liberation-sans" ng-repeat="r in fiveReviews" style="background-color: #666666; border-radius: 10px; color: white;">
                 <p>{{r.content}}
-                    <button class="btn" style="background-color: #666666">
-                        <span class="" style="color: white; text-align: right;">&times;</span>
+                    <button class="btn" style="background-color: #666666;" ng-click="selectReview(r)">
+                        <span class="" style="color: black; text-align: right;">REPLY</span>
                     </button>
                 </p>
                 <p>-{{r.user}}</p>
@@ -39,6 +38,39 @@
         <div id="navarrows" style="width: 100%; margin: 0 auto; text-align: center">
             <span class="btn glyphicon glyphicon-arrow-left"></span>
             <span class="btn glyphicon glyphicon-arrow-right"></span>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="reviewReplyModal" tabindex="1" role="dialog" aria-labelledby="replyLabel">
+    <div class="modal-dialog liberation_sans" role="document">
+        <div class="modal-content opaqueGrayDark">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span style="color: white;" aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="replyLabel">Reply to {{selectedReview.user}}</h4>
+            </div>
+            <div class="modal-body" style="text-align: center;">
+                <div style="padding-right: 20px;">
+                    <textarea class="form-control" style="padding-bottom: 20px;"></textarea>
+                </div>
+                </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal" data-toggle="modal" data-target="#replySuccessModal">Reply</button>
+                <button class="btn btn-default" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="replySuccessModal" tabindex="1" role="dialog" aria-labelledby="successLabel">
+    <div class="modal-dialog liberation_sans" role="document">
+        <div class="modal-content opaqueGrayDark modal-sm">
+            <div class="modal-header">
+                <h4 class="modal-title" id="successLabel">Reply successfully submitted!</h4>
+            </div>
+            <div class="modal-body">
+                <button data-dismiss="modal" class="btn btn-primary same-size-button btn-lg">OK!</button>
+            </div>
         </div>
     </div>
 </div>

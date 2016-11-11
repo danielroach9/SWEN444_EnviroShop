@@ -17,6 +17,7 @@ angular.module('EnviroShop')
     $scope.lowerBound = 0;
     $scope.higherBound = 3;
 
+    $scope.selectedReview = null;
     $scope.selectedProduct = null;
 
 
@@ -83,6 +84,11 @@ angular.module('EnviroShop')
         if($scope.unseenProducts.length > 0) {
             $scope.threeProducts.push($scope.unseenProducts.shift());
         }
+    };
+
+    $scope.selectReview = function (review) {
+        $scope.selectedReview = review;
+        $('#reviewReplyModal').modal('show');
     };
 
     if(path.includes('products')) {

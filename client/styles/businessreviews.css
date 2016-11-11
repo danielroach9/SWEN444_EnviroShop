@@ -30,3 +30,8 @@
     margin-bottom: -100%;
     overflow-y: hidden;
 }
+
+textarea.form-control {
+    height: 100px;
+    resize: none;
+}
