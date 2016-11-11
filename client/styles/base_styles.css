@@ -195,6 +195,17 @@ End of Business Overview Rules
 
 /*********************************
 
+Modals
+
+**********************************/
+
+.modal-title, .modal-body {
+    color: white;
+    font-family: liberation_sans;
+}
+
+/*********************************
+
 Button style for the project
 
 *********************************/

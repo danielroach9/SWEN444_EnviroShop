@@ -22,18 +22,102 @@
         </div>
         <div class="fill"></div>
     </div>
-
     <div class="col-md-8 busPanel">
         <h1 class="liberation_sans panelHeader">Products</h1>
-        <div class="products">
-            <div ng-repeat="p in fiveProducts" style="background: #666666; border-radius: 10px;">
-                <img id="productImg{{p.Id}}" src="">
-                <p>product here</p>
+        <div class="products" style="margin: 0 auto; align-content: center">
+            <div id="product{{p.id}}" class="productContainer" ng-repeat="p in threeProducts" ng-model="p" style="background: #666666; border-radius: 10px; margin-bottom: 10px; width: 90%; margin-left: auto; margin-right: auto;" ng-dblclick="selectProduct(p)">
+                <div class="productImageDiv">
+                    <img class="productImage" ng-src="{{p.imgLink}}">
+                    <div>
+                        <span><img class="ratingLeaf" ng-src="{{p.rating >= 1 ? '../assets/review_leaf_filled.png' : '../assets/review_leaf_empty.png'}}"></span>
+                        <span><img class="ratingLeaf" ng-src="{{p.rating >= 2 ? '../assets/review_leaf_filled.png' : '../assets/review_leaf_empty.png'}}"></span>
+                        <span><img class="ratingLeaf" ng-src="{{p.rating >= 3 ? '../assets/review_leaf_filled.png' : '../assets/review_leaf_empty.png'}}"></span>
+                        <span><img class="ratingLeaf" ng-src="{{p.rating >= 4 ? '../assets/review_leaf_filled.png' : '../assets/review_leaf_empty.png'}}"></span>
+                        <span><img class="ratingLeaf" ng-src="{{p.rating >= 5 ? '../assets/review_leaf_filled.png' : '../assets/review_leaf_empty.png'}}"></span>
+                    </div>
+                </div>
+                <div class="productInfoDiv">
+                    <p>{{p.name}}</p>
+                    <p>$ {{p.price}}<span ng-show="p.hasUnit"> / {{p.unit}}</span></p>
+                    <p>{{p.description}}</p>
+                </div>
             </div>
         </div>
         <div id="navarrows" style="width: 100%; margin: 0 auto; text-align: center">
             <span class="btn glyphicon glyphicon-arrow-left"></span>
             <span class="btn glyphicon glyphicon-arrow-right"></span>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="productDetailModal" tabindex="1" role="dialog" aria-labelledby="infoHeader">
+    <div class="modal-dialog liberation_sans" role="document">
+        <div class="modal-content opaqueGrayDark">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span style="color: white;" aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="infoHeader">Product {{selectedProduct.id}} - {{selectedProduct.name}}</h4>
+            </div>
+            <div class="modal-body">
+                <table class="table-condensed">
+                    <tr>
+                        <td>Description</td>
+                        <td>
+                            <textarea ng-model="selectedProduct.description" class="form-control"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td class="selectedProductValueCell">
+                            <input ng-model="selectedProduct.name" class="form-control">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Price</td>
+                        <td class="selectedProductValueCell">
+                            <input ng-model="selectedProduct.price" class="form-control">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Has Unit?</td>
+                        <td class="selectedProductValueCell">
+                            <button class="btn btn-primary" ng-disabled="selectedProduct.hasUnit == true" ng-click="selectedProduct.hasUnit = !selectedProduct.hasUnit">YES</button>
+                            <button class="btn btn-danger" ng-disabled="selectedProduct.hasUnit == false" ng-click="selectedProduct.hasUnit = !selectedProduct.hasUnit">NO</button>
+                        </td>
+                    </tr>
+                    <tr ng-show="selectedProduct.hasUnit">
+                        <td>Unit</td>
+                        <td class="selectedProductValueCell">
+                            <input ng-model="selectedProduct.unit" class="form-control">
+                        </td>
+                    </tr>
+
+                    <tr>
+                    </tr>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button data-target="#productDeletionModal" data-toggle="modal" data-dismiss="modal" class="btn btn-danger same-size-button">Delete Product</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="productDeletionModal" tabindex="1" role="dialog" aria-labelledby="deleteLabel">
+    <div class="modal-dialog liberation_sans" role="document">
+        <div class="modal-content opaqueGrayDark">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span style="color: white;" aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="deleteLabel">Remove {{selectedProduct.name}}?</h4>
+            </div>
+            <div class="modal-body" style="text-align: center;">
+                <div>
+                    <img class="productImageInModal" ng-src="{{selectedProduct.imgLink}}">
+                </div>
+                <button class="btn btn-primary" data-dismiss="modal" ng-click="deleteProduct(selectedProduct); selectedProduct = null">Yes</button>
+                <button class="btn btn-default">Cancel</button>
+            </div>
         </div>
     </div>
 </div>

@@ -10,8 +10,15 @@ angular.module('EnviroShop')
     $scope.fiveReviews = [];
     $scope.reviews = [];
 
-    $scope.fiveProducts = [];
+    $scope.threeProducts = [];
     $scope.products = [];
+    $scope.unseenProducts = [];
+
+    $scope.lowerBound = 0;
+    $scope.higherBound = 3;
+
+    $scope.selectedProduct = null;
+
 
     var path = $location.path();
 
@@ -56,10 +63,26 @@ angular.module('EnviroShop')
         var chars = productName.split(' ');
 
         for(var i = 0; i < chars.length; i++) {
-            ltrs = ltrs.concat(chars[0].charAt(0));
+            ltrs = ltrs.concat(chars[i].charAt(0));
         }
 
-        return bis + '_' + ltrs.toLowerCase() + '.jpg';
+        return '/assets/' + bis + '_' + ltrs.toLowerCase() + '.jpg';
+    };
+
+    $scope.selectProduct = function (product) {
+        $scope.selectedProduct = product;
+        $('#productDetailModal').modal('show');
+    };
+
+    $scope.deleteProduct = function (p) {
+
+        var index = $(p, $scope.threeProducts);
+
+        $scope.threeProducts.splice(index,1);
+
+        if($scope.unseenProducts.length > 0) {
+            $scope.threeProducts.push($scope.unseenProducts.shift());
+        }
     };
 
     if(path.includes('products')) {
@@ -68,18 +91,15 @@ angular.module('EnviroShop')
             .then(function successCallback(response) {
 
                 $scope.products = response.data;
+                $scope.unseenProducts = $scope.products.slice($scope.lowerBound);
 
-                for(var i = 0; i < $scope.products; i++) {
-
-                    $scope.products.imgLink = $scope.determineImageUrl('wegmans', $scope.products.name);
+                for(var i = 0; i < $scope.unseenProducts.length; i++) {
+                    console.log($scope.determineImageUrl('wegmans', $scope.products[i].name));
+                    $scope.unseenProducts[i].imgLink = $scope.determineImageUrl('wegmans', $scope.unseenProducts[i].name);
                 }
 
-                $scope.fiveProducts = $scope.products.splice(0,5);
-
-                for(var a = 0; i < $scope.fiveProducts; i++) {
-                    $('#productImg' + $scope.fiveProducts[i].id)
-                        .setAttribute('src', $scope.fiveProducts[i].imgLink);
-                }
+                $scope.threeProducts = $scope.unseenProducts.splice($scope.lowerBound, $scope.higherBound);
+                console.log($scope.threeProducts[2]);
 
             }, function errorCallback(response) {
                 console.log(response);
