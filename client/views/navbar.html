@@ -4,12 +4,12 @@
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <h3 class="dustismo tagline">EnviroShop</h3>
-                <a href="#/"><img id="logo" src="../assets/icon_blatt.png"></a>
+                <a href="{{ homeLink }}"><img id="logo" src="../assets/icon_blatt.png"></a>
             </div>
             <div class="glyphs">
                 <span id="mapButton" class="btn glyphicon glyphicon-map-marker" ></span>
                 <span id="searchButton" class="btn glyphicon glyphicon-search" ng-click="showSearchBar()"></span>
-                <span id="userButton" class="btn glyphicon glyphicon-user"></span>
+                <span id="userButton" class="btn glyphicon glyphicon-user" ng-click="goToProfile()"></span>
                 <span id="faqButton" class="btn glyphicon glyphicon-question-sign" ng-click="showFaqs()"></span>
 
             </div>

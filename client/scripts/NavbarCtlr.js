@@ -1,5 +1,5 @@
 angular.module('EnviroShop')
-    .controller('NavbarCtlr', ['$scope', '$location', function ($scope, $location) {
+    .controller('NavbarCtlr', ['$rootScope', '$scope', '$location', function ($rootScope, $scope, $location) {
 
         console.log('NavbarCtlr initialized');
 
@@ -21,4 +21,9 @@ angular.module('EnviroShop')
         else {
             console.log("path doesn't contain productview in it");
         }*/
+
+        /* Always go to the users profile type */
+        $scope.goToProfile = function() {
+            $location.url($rootScope.profileLink);
+        }
     }]);

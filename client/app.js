@@ -15,6 +15,10 @@ app.config(['$routeProvider', function ($routeProvider) {
             templateUrl: 'views/shopperDashboard.html',
             controller: ''
         })
+        .when('/shopperProfileview',{
+            templateUrl: 'views/shopperProfileview.html',
+            controller: ''
+        })
         .when('/business_reviews', {
             templateUrl: 'views/businessreviews.html',
             controller: 'BusinessPageCtlr'
