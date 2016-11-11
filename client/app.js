@@ -35,6 +35,10 @@ app.config(['$routeProvider', function ($routeProvider) {
             templateUrl: 'views/productview.html',
             controller: ''
         })
+        .when('/smallproduct', {
+            templateUrl: 'views/smallproduct.html',
+            controller: ''
+        })
         .when('/businessview', {
             templateUrl: 'views/businessview.html',
             controller: ''
