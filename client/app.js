@@ -43,10 +43,6 @@ app.config(['$routeProvider', function ($routeProvider) {
             templateUrl: 'views/searchresults.html',
             controller: ''
         })
-        .when('/navbar', {
-            templateUrl: 'views/navbar.html',
-            controller: ''
-        })
         .when('/review', {
             templateUrl: 'views/review.html',
             controller: ''
