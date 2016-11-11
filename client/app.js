@@ -27,12 +27,20 @@ app.config(['$routeProvider', function ($routeProvider) {
             templateUrl: 'views/productview.html',
             controller: ''
         })
+        .when('/businessview', {
+            templateUrl: 'views/businessview.html',
+            controller: ''
+        })
         .when('/search', {
             templateUrl: 'views/searchresults.html',
             controller: ''
         })
         .when('/navbar', {
             templateUrl: 'views/navbar.html',
+            controller: ''
+        })
+        .when('/review', {
+            templateUrl: 'views/review.html',
             controller: ''
         })
         .when('/overview', {

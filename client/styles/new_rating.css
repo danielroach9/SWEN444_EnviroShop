@@ -1,0 +1,18 @@
+.avaliar{
+    margin-top:5px;
+	background-color:white;
+}
+.avaliar textarea{
+	width:100%;
+}
+.stars
+{
+    margin: 20px 0;
+    font-size: 24px;
+    color: #d17581;
+}
+#cancel
+{
+    color: white;
+    background-color: #666666;
+}
