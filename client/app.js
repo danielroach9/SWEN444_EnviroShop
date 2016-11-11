@@ -43,7 +43,11 @@ app.config(['$routeProvider', function ($routeProvider) {
             templateUrl: 'views/business_overview.html',
             controller: ''
         })
-        .otherwise({ redirectTo: '/login'});
+        .when('/faq', {
+            templateUrl: 'views/faq.html',
+            controller: ''
+        })
+        .otherwise({ redirectTo: '/'});
 }]);
 
 /*
