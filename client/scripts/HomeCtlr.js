@@ -21,8 +21,8 @@ angular.module('EnviroShop')
                 $rootScope.profileLink = '/businessDashboard';
             }
             else if ($scope.loginCredentials.email == "enviroshopUser@gmail.com" && $scope.loginCredentials.pswd == "123456") {
-                $location.url('/shopperDashboard');
-                $rootScope.homeLink = '#/shopperDashboard/';
+                $location.url('/userDashboard');
+                $rootScope.homeLink = '#/userDashboard/';
                 $rootScope.profileLink = '/shopperProfileview';
             }
 
