@@ -1,0 +1,43 @@
+html, body {
+    height: 100%;
+    background-image: linear-gradient(white, rgb(119,166,130));
+
+}
+
+.container {
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+
+.profileColumn {
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+    padding-bottom: 100%;
+    margin-bottom: -100%;
+}
+
+.profileWrapper {
+    padding-top: 50px;
+}
+
+#profileName {
+    padding-top: 20px;
+    font-family: liberation_sans;
+    font-size: xx-large;
+}
+
+.profileCenter {
+    height:100%;
+    text-align: center;
+    border-radius: 50px;
+    color: white;
+}
+
+.img-circle {
+    border-radius: 50%;
+    padding-top: 10px;
+}
+
