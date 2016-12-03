@@ -33,7 +33,7 @@ app.config(['$routeProvider', function ($routeProvider) {
         })
         .when('/product', {
             templateUrl: 'views/productview.html',
-            controller: ''
+            controller: 'ProductViewCtlr'
         })
         .when('/smallproduct', {
             templateUrl: 'views/smallproduct.html',
