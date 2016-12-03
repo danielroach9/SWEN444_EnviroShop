@@ -13,7 +13,7 @@ app.config(['$routeProvider', function ($routeProvider) {
         })
         .when('/shopperDashboard',{
             templateUrl: 'views/shopperDashboard.html',
-            controller: ''
+            controller: 'UserPageCtlr'
         })
         .when('/shopperProfileview',{
             templateUrl: 'views/shopperProfileview.html',

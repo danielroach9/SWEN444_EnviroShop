@@ -21,5 +21,8 @@ angular.module('EnviroShop')
                                                                                console.log('REST call for info not set up');
                                                                                });
 
-
+        /* Got ot the users profile */
+        $scope.goToProfile = function () {
+            $location.url('/shopperProfileview');
+        };
     }]);
