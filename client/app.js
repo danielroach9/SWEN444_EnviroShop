@@ -31,6 +31,10 @@ app.config(['$routeProvider', function ($routeProvider) {
             templateUrl: 'views/map.html',
             controller: ''
         })
+        .when('/product/:id', {
+            templateUrl: 'views/productview.html',
+            controller: 'ProductViewCtlr'
+        })
         .when('/product', {
             templateUrl: 'views/productview.html',
             controller: 'ProductViewCtlr'
