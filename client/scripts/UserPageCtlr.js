@@ -5,6 +5,7 @@ angular.module('EnviroShop')
         console.log('UserPageCtlr initialized');
 
         $scope.userFeed = null;
+                                 $scope.products = null;
 
 
         DataService.getUserFeed('bis')
@@ -13,6 +14,15 @@ angular.module('EnviroShop')
             }, function errorCallback(response) {
                 console.log('REST call for info not set up');
             });
+                                 
+                                 DataService.getBusinessProducts('stuff').then(function successCallback(response) {
+                                                                               $scope.products = response.data;
+                                                                               }, function errorCallback(response) {
+                                                                               console.log('REST call for info not set up');
+                                                                               });
 
-
+        /* Got ot the users profile */
+        $scope.goToProfile = function () {
+            $location.url('/shopperProfileview');
+        };
     }]);

@@ -7,23 +7,57 @@
 <body>
 <div class="container" ng-model="userFeed">
 
-
-    <br>
-    <div class="jumbotron store">
-        <div class="container" ng-model="userFeed">
+<br>
+<div class="row">
+    <div class="col-lg-2">
+        <div class="panel panel-success">
+            <h4>My Profile</h4>
+            <br>
+            <img class="img-circle" src="../assets/userProfileMale.png"/>
+            <h4><span style="font-style: italic">Enviro Shop</span></h4>
+            <button ng-click="goToProfile()" class="btn btn-primary">View Profile</button>
+            <br>
+            <br>
+        </div>
+    </div>
+    
+    <div class="col-lg-10">
+        <div class="panel panel-success" ng-model="userFeed">
+            <div class="container">
             <a href="#/businessview"><h2>{{userFeed[0].name}}</h2></a>
-            <img style="max-width: 160px; max-height: 100px;" ng-src="{{userFeed[0].image}}"/>
-            <p>Description: {{userFeed[0].description}}</p>
+            <div class="row">
+                <div class="col-md-2">
+                    <img style="max-width: 160px; max-height: 100px;" float="center" ng-src="{{userFeed[0].image}}"/>
+                    </img>
+                </div>
+                <div class="col-md-7">
+                    <p>Description: {{userFeed[0].description}}</p>
+                    <br>
+                    <a target="_blank" href="https://www.google.com/maps/dir/''/100+Parkview+Dr,+Rochester,+NY+14625/@43.1591337,-77.519328,17z/data=!4m8!4m7!1m0!1m5!1m1!1s0x89d6ca4b5a9071bd:0x783ad806d21cb3de!2m2!1d-77.5177616!2d43.1604798">
+                    {{userFeed[0].street_address}}, {{userFeed[0].city}}, {{userFeed[0].state}} </a>
+                </div>
+            </div>
+            <br>
+            </div>
+        </div>
+        <br>
+        <div class="panel panel-success" ng-repeat="product in products | limitTo:5:0">
+            <div class="container">
+                <a href="#/product/{{product.id}}"><h2>{{product.name}}</h2></a>
+                <div class="row">
+                    <div class="col-md-2">
+                        <img style="max-width: 160px; max-height: 100px;" float="center" ng-src="{{product.image}}"/>
+                        </img>
+                    </div>
+                    <div class="col-md-7">
+                        <p>Description: {{product.description}}</p>
+                        </div>
+                </div>
+                <br>
+            </div>
         </div>
     </div>
-    <br>
-    <div class="jumbotron store">
-        <div class="container" ng-model="userFeed">
-            <a href="#/product"><h2>{{userFeed[1].name}}</h2></a>
-            <img style="max-width: 160px; max-height: 100px;" ng-src="{{userFeed[1].image}}"/>
-            <p>Description: {{userFeed[1].description}}</p>
-        </div>
-    </div>
+</div>
 
 </div>
 </body>

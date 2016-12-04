@@ -1,19 +1,19 @@
 
 <navbar></navbar>
 
-<div class="container">
+<div class="container" ng-model="product">
     
     <br>
     <br>
     
-    <div class="panel panel-success">
+    <div class="panel panel-success" ng-model="product">
         <div class="panel-heading">
-            <h3 class="panel-title">Coleman's Farms Organic Celery</h3>
+            <h3 class="panel-title">{{product.name}}</h3>
         </div>
         <div class="panel-body">
             <div class="row">
                 <div class="col-md-4">
-                    <img src="../assets/celery_example.jpg" class="img-rounded" alt="Celery" width="304" height="236">
+                    <img src="{{product.image}}" class="img-rounded" alt="Celery" width="304" height="236">
                     </img>
                 </div>
                 
@@ -29,7 +29,7 @@
                 
                 <h4> About </h4>
                 <div class="col-md-8">
-                    Very specially delicious Celery brought right from the farm to the market! No pesticides!
+                    {{product.description}}
                 </div>
             </div>
         </div>

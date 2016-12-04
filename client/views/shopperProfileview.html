@@ -1,5 +1,6 @@
 <navbar></navbar>
 <link rel="stylesheet" type="text/css" href="../styles/userprofile.css">
+
 <div class="container">
     <div class="row">
         <div class="col-md-4 profileColumn">
@@ -8,21 +9,70 @@
         <div class="col-md-4 profileColumn profileWrapper">
             <div class="row opaqueGrayDark profileCenter">
                 <div class="row" id="profileName">
-                    Ricky Bobby
+                    Enviro Shop
                 </div>
                 <img class="img-circle" src="../assets/userProfileMale.png"/>
-                <p>Profile Block</p>
-                <p>.</p>
-                <p>.</p>
-                <p>.</p>
-                <p>.</p>
-                <p>.</p>
-                <p>.</p>
+                <div class="form-group col-xs-8 col-centered">
+                    <input ng-model="userProfile.firstName" type="text" class="form-control" placeholder="Enviro">
+                    <input ng-model="userProfile.lastName" type="text" class="form-control" placeholder="Shop">
+                    <input ng-model="userProfile.email" type="text" class="form-control" placeholder="enviroshopUser@gmail.com">
+                    <input ng-model="userProfile.phoneNum" type="text" class="form-control" placeholder="123-456-7890">
+
+                    <!-- The buttons at the bottom -->
+                    <div class="col-centered">
+                        <button ng-click="changePassword()" class="btn btn-primary btn-lg">Change Password</button>
+                    </div>
+                </div>
 
             </div>
         </div>
         <div class="col-md-4 profileColumn">
             &nbsp
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="changePasswordModal" tabindex="1" role="dialog" aria-labelledby="header">
+    <div class="modal-dialog liberation_sans" role="document">
+        <div class="modal-content opaqueGrayDark modal-sm">
+            <div class="modal-header">
+                <h4 class="modal-title" id="header">Change Password</h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" role="form">
+                    <input ng-model="userProfile.passwd1" type="password" class="form-control" placeholder="Password">
+                    <input ng-model="userProfile.passwd2" type="password" class="form-control" placeholder="Please Re-Enter Password">
+                </form>
+                <button ng-click="submitPassword()" class="btn btn-primary same-size-button btn-lg">Submit</button>
+                <button class="btn btn-secondary same-size-button btn-lg pull-right" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="passwordConfirmSubmitted" tabindex="1" role="dialog" aria-labelledby="successLabel">
+    <div class="modal-dialog liberation_sans" role="document">
+        <div class="modal-content opaqueGrayDark modal-sm">
+            <div class="modal-header">
+                <h4 class="modal-title" id="successLabel">Password Successfully Changed!</h4>
+            </div>
+            <div class="modal-body">
+                <button ng-click="passwordChanged()" class="btn btn-primary btn-lg " data-dismiss="modal">OK!</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="passwordDenySubmitted" tabindex="1" role="dialog" aria-labelledby="denyLabel">
+    <div class="modal-dialog liberation_sans" role="document">
+        <div class="modal-content opaqueGrayDark modal-sm">
+            <div class="modal-header">
+                <h4 class="modal-title" id="denyLabel">Passwords Do Not Match!</h4>
+            </div>
+            <div class="modal-body">
+                <button class="btn btn-primary btn-lg " data-dismiss="modal">OK!</button>
+            </div>
         </div>
     </div>
 </div>

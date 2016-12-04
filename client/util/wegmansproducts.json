@@ -6,6 +6,7 @@
     "hasUnit": true,
     "unit": "5 lb",
     "rating": 4,
+    "image": "../assets/wegmans_prip.jpg",
     "description": "If bakes potatoes are your preference, choose none other then Russet. These large dense spuds have think skins that hold up to hot oven temperatures.",
     "deleted": false
   },
@@ -16,6 +17,7 @@
     "hasUnit": true,
     "unit": "lb",
     "rating": 4,
+    "image": "../assets/wegmans_bcc.jpg",
     "description": "Great for 2-3 People Washed & Ready to Use",
     "deleted": false
   },
@@ -26,6 +28,7 @@
     "hasUnit": false,
     "unit": "None",
     "rating": 3,
+    "image": "../assets/wegmans_cfs.jpg",
     "description": "Gluten free. Fat free. Low sodium. The chocolate craving solution. Excellent as a topping for ice cream and desserts. Remember, your satisfaction is always guaranteed with Wegmans brand products",
     "deleted": false
   },
@@ -36,6 +39,7 @@
     "hasUnit": true,
     "unit": "12 pk",
     "rating": 4,
+    "image": "../assets/wegmans_ismw.jpg",
     "description": "We're proud of this product and we hope you'll agree. Remember, your satisfaction is always guaranteed with Wegmans brand products.",
     "deleted": false
   },
@@ -46,6 +50,7 @@
     "hasUnit": false,
     "unit": "None",
     "rating": 4,
+    "image": "../assets/wegmans_fsb.jpg",
     "description": "(vase not included)",
     "deleted": false
   },
@@ -56,6 +61,7 @@
     "hasUnit": false,
     "unit": "None",
     "rating": 5,
+    "image": "../assets/wegmans_mbfp.jpg",
     "description": "Make foods like mixed berries, part of your plan for heart healthful eating. Strawberries, blackberries, blueberries & raspberries. Just picked and quickly frozen",
     "deleted": false
   },
@@ -66,6 +72,7 @@
     "hasUnit": false,
     "unit": "None",
     "rating": 4,
+    "image": "../assets/wegmans_swlpr.jpg",
     "description": "Salmon with lemon peper rubbed on it",
     "deleted": false
   },
@@ -76,6 +83,7 @@
     "hasUnit": true,
     "unit": "lb",
     "rating": 2,
+    "image": "../assets/wegmans_bwcj.jpg",
     "description": "Has crab meat, cream cheese, and breadcrumbs",
     "deleted": false
   },
@@ -86,6 +94,7 @@
     "hasUnit": false,
     "unit": "None",
     "rating": 4,
+    "image": "../assets/wegmans_jrcg.jpg",
     "description": "Gluten Free. Lactose Free. Vegan. Flavored juice beverage blend of grape, apple & cranberry juices from concentrate. 56% less sugar than cranberry grape juice.",
     "deleted": false
   },
@@ -96,7 +105,19 @@
     "hasUnit": false,
     "unit": "None",
     "rating": 4,
+    "image": "../assets/wegmans_busc.jpg",
     "description": "Gluten free.",
+    "deleted": false
+  },
+  {
+    "id": 11,
+    "name": "Coleman Farms Organic Celery",
+    "price": 3.29,
+    "hasUnit": false,
+    "unit": "None",
+    "rating": 5,
+    "image": "../assets/wegmans_cfoc.jpg",
+    "description": "Very specially delicious Celery brought right from the farm to the market! No pesticides!",
     "deleted": false
   }
 ]

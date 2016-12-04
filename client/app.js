@@ -13,11 +13,11 @@ app.config(['$routeProvider', function ($routeProvider) {
         })
         .when('/shopperDashboard',{
             templateUrl: 'views/shopperDashboard.html',
-            controller: ''
+            controller: 'UserPageCtlr'
         })
         .when('/shopperProfileview',{
             templateUrl: 'views/shopperProfileview.html',
-            controller: ''
+            controller: 'ShopperProfileCtlr'
         })
         .when('/business_reviews', {
             templateUrl: 'views/businessreviews.html',
@@ -31,9 +31,13 @@ app.config(['$routeProvider', function ($routeProvider) {
             templateUrl: 'views/map.html',
             controller: ''
         })
+        .when('/product/:id', {
+            templateUrl: 'views/productview.html',
+            controller: 'ProductViewCtlr'
+        })
         .when('/product', {
             templateUrl: 'views/productview.html',
-            controller: ''
+            controller: 'ProductViewCtlr'
         })
         .when('/smallproduct', {
             templateUrl: 'views/smallproduct.html',
