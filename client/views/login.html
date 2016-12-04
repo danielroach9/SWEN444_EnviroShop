@@ -20,6 +20,7 @@
             <!-- These input fields show up first -->
             <div class="form-group col-xs-8 col-centered" id="inputFieldsMain">
                 <p class="welcome-text">Welcome!</p>
+                <form ng-submit="login()">
                 <input ng-model="loginCredentials.email" type="text" class="form-control" placeholder="Email">
                 <input ng-model="loginCredentials.pswd" type="password" class="form-control" placeholder="Password">
 
@@ -29,6 +30,7 @@
                     <button ng-click="signUp()" class="btn btn-primary same-size-button btn-lg pull-right">Sign Up</button>
                     <a href="#/faq">Need help?</a>
                 </div>
+                </form>
             </div>
 
             <!-- The hidden shopper signup fields -->
