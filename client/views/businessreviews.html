@@ -22,11 +22,12 @@
         <h1 class="liberation_sans panelHeader">Latest Reviews</h1>
         <div class="reviews">
             <div class="liberation-sans" ng-repeat="r in reviews | limitTo:5:startAt" style="background-color: #666666; border-radius: 10px; color: white;">
-                <p>{{r.content}}
-                    <button class="btn" style="background-color: #666666;" ng-click="selectReview(r)">
-                        <span class="" style="color: black; text-align: right;">REPLY</span>
+                <p>{{r.content}}</p>
+                <div style="text-align: right">
+                    <button class="btn btn-primary" style="background-color: #666666;" ng-click="selectReview(r)">
+                        Message User
                     </button>
-                </p>
+                </div>
                 <p>-{{r.user}}</p>
                 <p style="text-align: right;">{{r.date_posted | date: "MM-dd-yy"}}</p>
             </div>

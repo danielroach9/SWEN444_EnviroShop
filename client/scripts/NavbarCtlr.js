@@ -3,6 +3,11 @@ angular.module('EnviroShop')
 
         console.log('NavbarCtlr initialized');
 
+        if ($rootScope.homeLink === undefined) {
+            $rootScope.homeLink = "/#/";
+            console.log('Rootscope homelink reset');
+        }
+
         var path = $location.path();
 
         $scope.showSearchBar = function () {

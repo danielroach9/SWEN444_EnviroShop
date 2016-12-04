@@ -8,14 +8,13 @@ angular.module('EnviroShop')
         $('#inputFieldsShopperSignup').hide();
         $('#inputFieldsBusinessSignup').hide();
         $scope.loginCredentials = {};
-        $rootScope.homeLink = '#/';
+        $rootScope.homeLink = '/#/';
 
         /* This function 'logs in' a user.  There are two hardcoded acceptable inputs for a business and a shopper'
            it's really just two links to other web-pages
          */
         $scope.login = function () {
             if ($scope.loginCredentials.email == "wegmans@gmail.com" && $scope.loginCredentials.pswd == "123456") {
-                //$scope.nextPage =
                 $location.url('/businessDashboard');
                 $rootScope.homeLink = '#/businessDashboard';
                 $rootScope.profileLink = '/businessDashboard';

@@ -67,7 +67,7 @@ app.config(['$routeProvider', function ($routeProvider) {
             templateUrl: 'views/userdashboard.html',
             controller: 'UserPageCtlr'
         })
-        .otherwise({ redirectTo: '/'});
+        .otherwise({ redirectTo: '/#/'});
 }]);
 
 /*
