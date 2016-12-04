@@ -18,6 +18,8 @@ angular.module('EnviroShop')
     $scope.reviewsPerPage = 5;
     $scope.reviewsBeginAt = 0;
 
+    $scope.productInfo = {};
+
     var path = $location.path();
 
     DataService.getBusinessInfo('bis')
@@ -167,6 +169,18 @@ angular.module('EnviroShop')
                 console.log('REST call for reviews not set up');
             });
     }
+
+    /* Show a modal saying the product was added */
+    $scope.addProduct = function() {
+        $('#addProductSubmittedModal').modal('show');
+    }
+
+    $('#addProductSubmittedModal').on('hidden.bs.modal', function () {
+        $("#name").val('');
+        $("#price").val('');
+        $("#description").val('');
+        console.log('Modal dismissed');
+    })
 
     $('#leftArrow').hide();
 }]);

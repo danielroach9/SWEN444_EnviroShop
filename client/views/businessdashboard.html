@@ -40,15 +40,30 @@
                 <h2 id="draganddrop">Drag and Drop Photos Here, or Click Here to Upload</h2>
             </div>
             <div class="form-group" style="margin-bottom: 7px;">
-                <input type="text" class="form-control" placeholder="Name">
-                <input type="text" class="form-control" placeholder="$ Price">
-                <textarea class="form-control" style="height: 158px;" placeholder="Description"></textarea>
+                <form class="form-horizontal">
+                    <input ng-model="productInfo.productName" type="text" class="form-control" placeholder="Name" id="name">
+                    <input ng-model="productInfo.price" type="text" class="form-control" placeholder="$ Price" id="price">
+                    <textarea ng-model="productInfo.description" class="form-control" style="height: 158px;" placeholder="Description" id="description"></textarea>
+                </form>
             </div>
             <div>
                 <div class="col-centered">
-                    <button class="btn btn-primary">Add Product</button>
+                    <button class="btn btn-primary" ng-click="addProduct()">Add Product</button>
                     <button class="btn btn-primary" style="margin-left: 10px;" ng-click="goToProducts()">See All Products</button>
                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="addProductSubmittedModal" tabindex="1" role="dialog" aria-labelledby="successLabel">
+    <div class="modal-dialog liberation_sans" role="document">
+        <div class="modal-content opaqueGrayDark modal-sm">
+            <div class="modal-header" ng-model="productInfo">
+                <h4 class="modal-title" id="successLabel">{{ productInfo.productName }} Successfully Added!</h4>
+            </div>
+            <div class="modal-body" >
+                <button class="btn btn-primary btn-lg " data-dismiss="modal">OK!</button>
             </div>
         </div>
     </div>
