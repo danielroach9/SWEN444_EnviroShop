@@ -5,175 +5,37 @@
 
     <div class="col-md-4 Filter" >
         <h1 class="liberation-sans">Filter by</h1>
-        <form>
             <input type="checkbox" name="filter" value="Business">Business<br>
             <input type="checkbox" name="filter" value="Product">Product<br>
             <input type="checkbox" name="filter" value="Rated">Rated<br>
             <div class="Tabbed">
-                <input type="checkbox" name="filter" value="5leaf">5 Leafs<br>
-                <input type="checkbox" name="filter" value="4leaf">4 Leafs<br>
-                <input type="checkbox" name="filter" value="3leaf">3 Leafs<br>
-                <input type="checkbox" name="filter" value="2leaf">2 Leafs<br>
-                <input type="checkbox" name="filter" value="1leaf">1 Leaf<br>
+                <input type="checkbox" name="filter" ng-model="check.rating['5']" value="5">5 Leafs<br>
+                <input type="checkbox" name="filter" ng-model="check.rating['4']" value="4">4 Leafs<br>
+                <input type="checkbox" name="filter" ng-model="check.rating['3']" value="3">3 Leafs<br>
+                <input type="checkbox" name="filter" ng-model="check.rating['2']" value="2">2 Leafs<br>
+                <input type="checkbox" name="filter" ng-model="check.rating['1']" value="1">1 Leaf<br>
             </div>
-        </form>
     </div>
 
     <div class="col-md-8">
 
-            <h1 class="liberation_sans">Search<input type="text">11 Results Found</h1>
+            <h1 class="liberation_sans">Search<input ng-model = "search"></h1>
             <table>
-                <tr onclick="window.location = '/#/product';" style="background-color: #2b8742; height: 50px">
-                    <td style="width: 500px; text-indent: 50px; color: white">
-                        Cabbage
+                <tr  ng-repeat="i in items | filter:search" ng-model="i" ng-class-odd="'odd'" ng-class-even="'even'" >
+                    <td class="Col1">
+                        <a href="/#/product/{{i.id}}" style="color:black">{{i.name}}</a>
                     </td>
-                    <td style="background-color: gray; width: 200px; text-align: left">
-                        <img style="height: 30px" src="../assets/review_leaf_filled.png"/>
-                        <img style="height: 30px" src="../assets/review_leaf_filled.png"/>
-                        <img style="height: 30px" src="../assets/review_leaf_filled.png"/>
-                        <img style="height: 30px" src="../assets/review_leaf_filled.png"/>
+                    <td ng-class-odd="'oddCol2'" ng-class-even="'evenCol2'">
+                        <span><img style="height: 30px" ng-src="{{i.rating >= 1 ? '../assets/review_leaf_filled.png' : '../assets/review_leaf_empty.png'}}"></span>
+                        <span><img style="height: 30px" ng-src="{{i.rating >= 2 ? '../assets/review_leaf_filled.png' : '../assets/review_leaf_empty.png'}}"></span>
+                        <span><img style="height: 30px" ng-src="{{i.rating >= 3 ? '../assets/review_leaf_filled.png' : '../assets/review_leaf_empty.png'}}"></span>
+                        <span><img style="height: 30px" ng-src="{{i.rating >= 4 ? '../assets/review_leaf_filled.png' : '../assets/review_leaf_empty.png'}}"></span>
+                        <span><img style="height: 30px" ng-src="{{i.rating >= 5 ? '../assets/review_leaf_filled.png' : '../assets/review_leaf_empty.png'}}"></span>
                     </td>
-                    <td style="width: 200px; text-align: right; position: relative; right: 50px">
-                        Product
-                    </td>
-                </tr>
-                <tr onclick="window.location = '/#/businessview';" style="background-color: white; height: 50px">
-                    <td style="width: 500px; text-indent: 50px">
-                        Wegmans
-                    </td>
-                    <td style="background-color: #a9a9a9; width: 200px; text-align: left">
-                        <img style="height: 30px" src="../assets/review_leaf_filled.png"/>
-                        <img style="height: 30px" src="../assets/review_leaf_filled.png"/>
-                        <img style="height: 30px" src="../assets/review_leaf_filled.png"/>
-                        <img style="height: 30px" src="../assets/review_leaf_filled.png"/>
-                        <img style="height: 30px" src="../assets/review_leaf_filled.png"/>
-                    </td>
-                    <td style="width: 200px; text-align: right; position: relative; right: 50px">
-                        Business
-                    </td>
-                </tr>
-                <tr onclick="window.location = '/#/product';" style="background-color: #2b8742; height: 50px">
-                    <td style="width: 500px; text-indent: 50px; color: white">
-                        Best Potato
-                    </td>
-                    <td style="background-color: gray; width: 200px; text-align: left">
-                        <img style="height: 30px" src="../assets/review_leaf_filled.png"/>
-                        <img style="height: 30px" src="../assets/review_leaf_filled.png"/>
-                        <img style="height: 30px" src="../assets/review_leaf_filled.png"/>
-                    </td>
-                    <td style="width: 200px; text-align: right; position: relative; right: 50px">
-                        Product
-                    </td>
-                </tr>
-                <tr onclick="window.location = '/#/product';" style="background-color: white; height: 50px">
-                    <td style="width: 500px; text-indent: 50px">
-                        Carrots
-                    </td>
-                    <td style="background-color: #a9a9a9; width: 200px; text-align: left">
-                        <img style="height: 30px" src="../assets/review_leaf_filled.png"/>
-
-                    </td>
-                    <td style="width: 200px; text-align: right; position: relative; right: 50px">
-                        Product
-                    </td>
-                </tr>
-                <tr onclick="window.location = '/#/product';" style="background-color: #2b8742; height: 50px">
-                    <td style="width: 500px; text-indent: 50px; color: white">
-                        Beer
-                    </td>
-                    <td style="background-color: gray; width: 200px; text-align: left">
-                        <img style="height: 30px" src="../assets/review_leaf_filled.png"/>
-                        <img style="height: 30px" src="../assets/review_leaf_filled.png"/>
-                        <img style="height: 30px" src="../assets/review_leaf_filled.png"/>
-                    </td>
-                    <td style="width: 200px; text-align: right; position: relative; right: 50px">
-                        Product
-                    </td>
-                </tr>
-                <tr onclick="window.location = '/#/product';" style="background-color: white; height: 50px">
-                    <td style="width: 500px; text-indent: 50px">
-                        Apples
-                    </td>
-                    <td style="background-color: #a9a9a9; width: 200px; text-align: left">
-                        <img style="height: 30px" src="../assets/review_leaf_filled.png"/>
-                        <img style="height: 30px" src="../assets/review_leaf_filled.png"/>
-                        <img style="height: 30px" src="../assets/review_leaf_filled.png"/>
-                        <img style="height: 30px" src="../assets/review_leaf_filled.png"/>
-                        <img style="height: 30px" src="../assets/review_leaf_filled.png"/>
-                    </td>
-                    <td style="width: 200px; text-align: right; position: relative; right: 50px">
-                        Product
-                    </td>
-                </tr>
-                <tr onclick="window.location = '/#/product';" style="background-color: #2b8742; height: 50px">
-                    <td style="width: 500px; text-indent: 50px; color: white">
-                        Steak
-                    </td>
-                    <td style="background-color: gray; width: 200px; text-align: left">
-                        <img style="height: 30px" src="../assets/review_leaf_filled.png"/>
-                        <img style="height: 30px" src="../assets/review_leaf_filled.png"/>
-                        <img style="height: 30px" src="../assets/review_leaf_filled.png"/>
-                    </td>
-                    <td style="width: 200px; text-align: right; position: relative; right: 50px">
-                        Product
-                    </td>
-                </tr>
-                <tr onclick="window.location = '/#/product';" style="background-color: white; height: 50px">
-                    <td style="width: 500px; text-indent: 50px">
-                        Cheese
-                    </td>
-                    <td style="background-color: #a9a9a9; width: 200px; text-align: left">
-                        <img style="height: 30px" src="../assets/review_leaf_filled.png"/>
-                        <img style="height: 30px" src="../assets/review_leaf_filled.png"/>
-                        <img style="height: 30px" src="../assets/review_leaf_filled.png"/>
-                        <img style="height: 30px" src="../assets/review_leaf_filled.png"/>
-                    </td>
-                    <td style="width: 200px; text-align: right; position: relative; right: 50px">
-                        Product
-                    </td>
-                </tr>
-                <tr onclick="window.location = '/#/product';" style="background-color: #2b8742; height: 50px">
-                    <td style="width: 500px; text-indent: 50px; color: white">
-                        Good Potato
-                    </td>
-                    <td style="background-color: gray; width: 200px; text-align: left">
-                        <img style="height: 30px" src="../assets/review_leaf_filled.png"/>
-                        <img style="height: 30px" src="../assets/review_leaf_filled.png"/>
-                        <img style="height: 30px" src="../assets/review_leaf_filled.png"/>
-                    </td>
-                    <td style="width: 200px; text-align: right; position: relative; right: 50px">
-                        Product
-                    </td>
-                </tr>
-                <tr onclick="window.location = '/#/product';" style="background-color: white; height: 50px">
-                    <td style="width: 500px; text-indent: 50px">
-                        Pineapple
-                    </td>
-                    <td style="background-color: #a9a9a9; width: 200px; text-align: left">
-                        <img style="height: 30px" src="../assets/review_leaf_filled.png"/>
-                        <img style="height: 30px" src="../assets/review_leaf_filled.png"/>
-                        <img style="height: 30px" src="../assets/review_leaf_filled.png"/>
-                        <img style="height: 30px" src="../assets/review_leaf_filled.png"/>
-                        <img style="height: 30px" src="../assets/review_leaf_filled.png"/>
-                    </td>
-                    <td style="width: 200px; text-align: right; position: relative; right: 50px">
-                        Product
-                    </td>
-                </tr>
-                <tr onclick="window.location = '/#/product';" style="background-color: #2b8742; height: 50px">
-                    <td style="width: 500px; text-indent: 50px; color: white">
-                        Crackers
-                    </td>
-                    <td style="background-color: gray; width: 200px; text-align: left">
-                        <img style="height: 30px" src="../assets/review_leaf_filled.png"/>
-                        <img style="height: 30px" src="../assets/review_leaf_filled.png"/>
-
-                    </td>
-                    <td style="width: 200px; text-align: right; position: relative; right: 50px">
-                        Product
+                    <td class="Col3">
+                        {{i.type}}
                     </td>
                 </tr>
             </table>
-
     </div>
 

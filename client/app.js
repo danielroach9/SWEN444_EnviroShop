@@ -49,7 +49,7 @@ app.config(['$routeProvider', function ($routeProvider) {
         })
         .when('/search', {
             templateUrl: 'views/searchresults.html',
-            controller: ''
+            controller: 'SearchCtlr'
         })
         .when('/review', {
             templateUrl: 'views/review.html',

@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Premium Russet Idaho Potatoes",
+    "rating": 4,
+    "type": "Product"
+  },
+  {
+    "id": 2,
+    "name": "Bias Cut Carrots",
+    "rating": 4,
+    "type": "Product"
+  },
+  {
+    "id": 3,
+    "name": "Chocolate Flavored Syrup",
+    "rating": 3,
+    "type": "Product"
+  },
+  {
+    "id": 4,
+    "name": "Italian Sparkling Mineral Water",
+    "rating": 4,
+    "type": "Product"
+  },
+  {
+    "id": 5,
+    "name": "Fall Signature Bouquet",
+    "rating": 4,
+    "type": "Product"
+  },
+  {
+    "id": 6,
+    "name": "Mixed Berries, Family Pack",
+    "rating": 5,
+    "type": "Product"
+  },
+  {
+    "id": 7,
+    "name": "Salmon with Lemon Pepper Rub",
+    "rating": 4,
+    "type": "Product"
+  },
+  {
+    "id": 8,
+    "name": "Bacon Wrapped Crab-Stuffed Jalapenos",
+    "rating": 2,
+    "type": "Product"
+  },
+  {
+    "id": 9,
+    "name": "Juic'd Right, Cranberry Grape",
+    "rating": 4,
+    "type": "Product"
+  },
+  {
+    "id": 10,
+    "name": "Butter, Unsalted, Sweet Cream",
+    "rating": 4,
+    "type": "Product"
+  },
+  {
+    "id": 11,
+    "name": "Coleman Farms Organic Celery",
+    "rating": 5,
+    "type": "Product"
+  },
+  {
+    "id": 11,
+    "name": "Wegmans",
+    "rating": 5,
+    "type": "Business"
+  }
+]

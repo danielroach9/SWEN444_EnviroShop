@@ -24,3 +24,39 @@ height: 100%
     position: relative;
     left: 30px;
 }
+
+.odd {
+    background-color: #2b8742;
+    height: 50px;
+}
+
+.Col1 {
+    width: 500px;
+    text-indent: 50px;
+}
+
+.oddCol2 {
+    background-color: gray;
+    width: 200px;
+    text-align: left;
+}
+
+.Col3 {
+    width: 200px;
+    text-align: right;
+    position: relative;
+    right: 50px;
+}
+
+.even {
+    background-color: white;
+    height: 50px;
+}
+
+
+.evenCol2 {
+    background-color: #a9a9a9;
+    width: 200px;
+    text-align: left;
+}
+

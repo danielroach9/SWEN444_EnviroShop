@@ -26,4 +26,8 @@ angular.module('EnviroShop').service('DataService', ['$http', function($http) {
     this.getProductReviews = function (product) {
       return $http.get(urlBaseUtil + '/' + 'wegmansproductreviews.json');
     };
+
+    this.getSearchItems = function (business) {
+        return $http.get(urlBaseUtil + '/' + 'search.json');
+    };
 }]);
