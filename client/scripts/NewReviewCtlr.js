@@ -10,13 +10,13 @@ angular.module('EnviroShop')
                                   $scope.reviews = [];
                                   $scope.review = null;
                                   
-                                  DataService.getReviews('stuff').then(function successCallback(response) {
-                                                                                        $scope.reviews = response.data;
-                                                                                        $scope.review = $scope.reviews[$scope.id - 1]
-                                                                                        
-                                                                                        }, function errorCallback(response) {
-                                                                                        console.log('REST call for info not set up');
-                                                                                        });
+                                  // DataService.getReviews('stuff').then(function successCallback(response) {
+                                  //                                                       $scope.reviews = response.data;
+                                  //                                                       $scope.review = $scope.reviews[$scope.id - 1]
+                                  //
+                                  //                                                       }, function errorCallback(response) {
+                                  //                                                       console.log('REST call for info not set up');
+                                  //                                                       });
                                   
         $scope.showSearchBar = function () {
             console.log('Would have opened the search bar');

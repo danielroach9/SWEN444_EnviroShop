@@ -1,0 +1,178 @@
+{
+  "cfoc": [
+    {
+      "id": 1,
+      "user": "jeffRulez6",
+      "content": "Just some really delicious food. So happy I went and bought this product.",
+      "rating": 3,
+      "deleted": false
+    },
+    {
+      "id": 2,
+      "user": "naifitt",
+      "content": "Not that good. Not awful, though.",
+      "rating": 2,
+      "deleted": false
+    }
+  ],
+  "bcc": [
+    {
+      "id": 1,
+      "user": "jeffRulez6",
+      "content": "Yum Yum Yum",
+      "rating": 5,
+      "deleted": false
+    },
+    {
+      "id": 2,
+      "user": "huabinot",
+      "content": "The worst food I ever ate.",
+      "rating": 1,
+      "deleted": false
+    }
+  ],
+  "busc": [
+    {
+      "id": 1,
+      "user": "jeffRulez6",
+      "content": "Great stuff. Really love Wegmans and their products.",
+      "rating": 4,
+      "deleted": false
+    },
+    {
+      "id": 2,
+      "user": "hcanadi",
+      "content": "It tasted even better the second time.",
+      "rating": 5,
+      "deleted": false
+    }
+  ],
+  "bwcj": [
+    {
+      "id": 1,
+      "user": "jeffRulez6",
+      "content": "Great stuff. Really love Wegmans and their products.",
+      "rating": 4,
+      "deleted": false
+    },
+    {
+      "id": 2,
+      "user": "hcanadi",
+      "content": "It tasted even better the second time.",
+      "rating": 5,
+      "deleted": false
+    }
+  ],
+  "cfs": [
+    {
+      "id": 1,
+      "user": "aslpeed",
+      "content": "Not a fan but maybe it's just me",
+      "rating": 2,
+      "deleted": false
+    },
+    {
+      "id": 2,
+      "user": "jeffRulez6",
+      "content": "It tasted even better the second time.",
+      "rating": 5,
+      "deleted": false
+    }
+  ],
+  "fsb": [
+    {
+      "id": 1,
+      "user": "jeffRulez6",
+      "content": "Great stuff. Really love Wegmans and their products.",
+      "rating": 4,
+      "deleted": false
+    },
+    {
+      "id": 2,
+      "user": "drawsamj",
+      "content": "Not a fan of flowers",
+      "rating": 2,
+      "deleted": false
+    }
+  ],
+  "ismw": [
+    {
+      "id": 1,
+      "user": "jeffRulez6",
+      "content": "Great stuff. Really love Wegmans and their products.",
+      "rating": 4,
+      "deleted": false
+    },
+    {
+      "id": 2,
+      "user": "yasminey",
+      "content": "Love itttt.",
+      "rating": 5,
+      "deleted": false
+    }
+  ],
+  "jrcg": [
+    {
+      "id": 1,
+      "user": "jeffRulez6",
+      "content": "Great stuff. Really love Wegmans and their products.",
+      "rating": 4,
+      "deleted": false
+    },
+    {
+      "id": 2,
+      "user": "drawsamj",
+      "content": "Great stuff",
+      "rating": 5,
+      "deleted": false
+    }
+  ],
+  "mbfp": [
+    {
+      "id": 1,
+      "user": "jeffRulez6",
+      "content": "Great stuff. Really love Wegmans and their products.",
+      "rating": 4,
+      "deleted": false
+    },
+    {
+      "id": 2,
+      "user": "huabinot",
+      "content": "It tasted even better the second time.",
+      "rating": 5,
+      "deleted": false
+    }
+  ],
+  "prip": [
+    {
+      "id": 1,
+      "user": "jeffRulez6",
+      "content": "Great stuff. Really love Wegmans and their products.",
+      "rating": 4,
+      "deleted": false
+    },
+    {
+      "id": 2,
+      "user": "naifitt",
+      "content": "It tasted even better the second time.",
+      "rating": 5,
+      "deleted": false
+    }
+  ],
+  "swlpr": [
+    {
+      "id": 1,
+      "user": "jeffRulez6",
+      "content": "Great stuff. Really love Wegmans and their products.",
+      "rating": 4,
+      "deleted": false
+    },
+    {
+      "id": 2,
+      "user": "hcanadi",
+      "content": "It tasted even better the second time.",
+      "rating": 5,
+      "deleted": false
+    }
+  ]
+}

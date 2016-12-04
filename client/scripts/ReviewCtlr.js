@@ -1,5 +1,5 @@
 angular.module('EnviroShop')
-    .controller('ReviewCtlr', ['$scope', '$location', 'DataService', '$routeParams', function ($scope, $location DataService, $routeParams) {
+    .controller('ReviewCtlr', ['$scope', '$location', 'DataService', '$routeParams', function ($scope, $location, DataService, $routeParams) {
 
         console.log('ReviewCtlr initialized');
 

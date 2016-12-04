@@ -103,10 +103,10 @@ function mostrar(){
         $('.btaval').removeClass('hidden');
     }
 }
-function test(){
-    $(".formtest").submit(function(e){
-                          var result = $(this).serialize();
-                          alert(result.);
-                          e.preventDefault();
-                          });
-}
+// function test(){
+//     $(".formtest").submit(function(e){
+//                           var result = $(this).serialize();
+//                           alert(result);
+//                           e.preventDefault();
+//                           });
+// }

@@ -46,12 +46,12 @@
         </div>
         <br>
         <div class="row" id="reviews">
-            <div class="col-lg-6" style="padding-left: 40px; padding-right: 40px;" ng-repeat="r in reviews">
+            <div class="col-lg-6" style="padding-left: 40px; padding-right: 40px;" ng-repeat="r in currentReviews">
                     <!--<review></review>-->
                 <div class="panel panel-success" style="padding-left: 10px; padding-right: 10px;">
                     <div class="panel-body">
                         <div class="row">
-                            <div class="col-lg-1" ng-model="r.user"></div>
+                            <div class="col-lg-1" ng-model="r.user">{{r.user}}</div>
                             <div class="col-lg-4 pull-right" style="padding-right: 60px">
                                 <table>
                                     <tr>
@@ -86,7 +86,7 @@
                         </div>
                         <br>
                         <div ng-model="r.content">
-                            This celery is so delicious. I am happy to be eating this celery because it is healthy and saves the planet.
+                            {{r.content}}
                         </div>
                     </div>
                 </div>

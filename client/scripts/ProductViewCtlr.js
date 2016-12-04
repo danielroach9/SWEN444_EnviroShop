@@ -4,41 +4,63 @@ angular.module('EnviroShop')
         console.log('ProductViewCtlr initialized');
 
         var path = $location.path();
-                                    
+
         $scope.id = $routeParams.id;
 
         $scope.showSearchBar = function () {
             console.log('Would have opened the search bar');
         };
-                                    
+
         $scope.products = [];
-                                    
-                                    DataService.getBusinessProducts('stuff').then(function successCallback(response) {
-                                                                                  $scope.products = response.data;
-                                                                                  $scope.product = $scope.products[$scope.id - 1]
-                                                                                  console.log('YO YO YO YO')
-                                                                                  }, function errorCallback(response) {
-                                                                                  console.log('REST call for info not set up');
-                                                                                  });
-                                    
-                                     
+        $scope.productReviews = {};
+        $scope.currentReviews = [];
 
-/*        if(path.includes('productview')) {
-            $('#userButton').css('color', 'white');
-        }
+        $scope.determineReviewArray = function (productName) {
 
-        else {
-            console.log("path doesn't contain productview in it");
-        }*/
+            var ltrs = '';
 
-        $scope.addReview = function (text, rating, username) {
+            var chars = productName.split(' ');
 
+            for(var i = 0; i < chars.length; i++) {
+                ltrs = ltrs.concat(chars[i].charAt(0));
+            }
 
-            $('#reviews').append()
+            return ltrs.toLowerCase();
+        };
 
-            var nr = $("<div>", {"class": "col-lg-6", "style": "padding-left: 40px; padding-right: 40px;"});
-            nr.appendChild()
+        DataService.getProductReviews('blah')
+            .then(function successCallback(response) {
 
+                $scope.productReviews = response.data;
+
+            }, function errorCallback(response) {
+
+                console.log("REST call for product reviews not set up");
+            });
+
+        DataService.getBusinessProducts('stuff').then(function successCallback(response) {
+
+            $scope.products = response.data;
+            $scope.product = $scope.products[$scope.id - 1];
+
+            $scope.currentReviews =
+                $scope.productReviews[$scope.determineReviewArray($scope.product.name)];
+
+            console.log('YO YO YO YO')
+        }, function errorCallback(response) {
+            console.log('REST call for info not set up');
+        });
+
+        $scope.addReview = function () {
+
+            var nr = {};
+
+            nr["id"] = 12;
+            nr["user"] = "enviroShopUser";
+            nr["content"] = $('#comentario').val();
+            nr["rating"] = $('#ratings').val();
+
+            $scope.currentReviews.push(nr);
         };
 
     }]);

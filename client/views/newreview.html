@@ -11,10 +11,10 @@
                     <textarea cols="50" id="comentario" name="comment" value="" placeholder="Write a review..."></textarea>
     																
                                                                     <div class="stars starrr" data-rating="0">
-                                                                        <input class="nota" name="rating" type="hidden" value="">
+                                                                        <input class="nota" id="ratings" name="rating" type="hidden" value="">
                                                                             </div>
                                                                     <div class="text-right">
-                                                                        <button class="btn btn-success" type="submit" onclick="test()" >Submit <i class="fa fa-reply"></i> </button>
+                                                                        <button class="btn btn-success" type="submit" id="submitButton" ng-click="addReview();" data-toggle="collapse" data-target="#1">Submit <i class="fa fa-reply"></i> </button>
                                                                         <span id="cancel" class="btn" data-toggle="collapse" data-target="#1" onClick="mostrar()">Cancel <i class="fa fa-times"></i> </span>
                                                                     </div>
                 </div>
