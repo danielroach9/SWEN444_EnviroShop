@@ -59,9 +59,10 @@ Instructions for use:
 
 
 Currently the following items are the only executable tasks:
-1. Signing up as a shopper or a business (must be signing up as the wegmans user or the enviroShop user).
-2. Getting directions to a business as a shopper.
-3. Writing a review for a business as a shopper.
-4. Removing a product from your listings as a business.
+
+  1. Signing up as a shopper or a business (must be signing up as the wegmans user or the enviroShop user).
+  2. Getting directions to a business as a shopper.
+  3. Writing a review for a business as a shopper.
+  4. Removing a product from your listings as a business.
 
 Thank you and enjoy EnviroShop!

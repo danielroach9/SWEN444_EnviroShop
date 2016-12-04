@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "user": "jeffRulez6",
+    "content": "Just some really delicious food. So happy I went and bought this product.",
+    "rating":3,
+    "deleted": false
+  },
+ {
+ "id": 1,
+ "user": "jeffRulez6",
+ "content": "Not that good. Not awful, though.",
+ "rating":2,
+ "deleted": false
+ },
+ {
+ "id": 1,
+ "user": "jeffRulez6",
+ "content": "Yum Yum Yum",
+ "rating":5,
+ "deleted": false
+ },
+ {
+ "id": 1,
+ "user": "jeffRulez6",
+ "content": "The worst food I ever ate.",
+ "rating":1,
+ "deleted": false
+ },
+ {
+ "id": 1,
+ "user": "jeffRulez6",
+ "content": "Great stuff. Really love Wegmans and their products.",
+ "rating":4,
+ "deleted": false
+ },
+
+]

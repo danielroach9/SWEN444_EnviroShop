@@ -67,3 +67,8 @@ textarea {
     font-family: liberation_sans;
     color: white;
 }
+
+.img-circle {
+    border-radius: 50%;
+    padding-top: 10px;
+}

@@ -172,6 +172,11 @@ angular.module('EnviroShop')
 
     /* Show a modal saying the product was added */
     $scope.addProduct = function() {
+        $('#confirmProductModal').modal('show');
+    }
+
+    $scope.submitProduct = function() {
+        $('#confirmProductModal').modal('hide');
         $('#addProductSubmittedModal').modal('show');
     }
 
@@ -179,6 +184,8 @@ angular.module('EnviroShop')
         $("#name").val('');
         $("#price").val('');
         $("#description").val('');
+        $('#confirmProductModal').modal('hide');
+        $('#addProductSubmittedModal').modal('hide');
         console.log('Modal dismissed');
     })
 

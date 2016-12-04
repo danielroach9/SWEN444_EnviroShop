@@ -106,7 +106,7 @@ function mostrar(){
 function test(){
     $(".formtest").submit(function(e){
                           var result = $(this).serialize();
-                          alert(result);
+                          alert(result.);
                           e.preventDefault();
                           });
 }
