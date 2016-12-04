@@ -58,5 +58,45 @@
     "rating": 5,
     "description": "Make foods like mixed berries, part of your plan for heart healthful eating. Strawberries, blackberries, blueberries & raspberries. Just picked and quickly frozen",
     "deleted": false
+  },
+  {
+    "id": 7,
+    "name": "Salmon with Lemon Pepper Rub",
+    "price": 9.00,
+    "hasUnit": false,
+    "unit": "None",
+    "rating": 4,
+    "description": "Salmon with lemon peper rubbed on it",
+    "deleted": false
+  },
+  {
+    "id": 8,
+    "name": "Bacon Wrapped Crab-Stuffed Jalapenos",
+    "price": 17.99,
+    "hasUnit": true,
+    "unit": "lb",
+    "rating": 2,
+    "description": "Has crab meat, cream cheese, and breadcrumbs",
+    "deleted": false
+  },
+  {
+    "id": 9,
+    "name": "Juic'd Right, Cranberry Grape",
+    "price": 1.99,
+    "hasUnit": false,
+    "unit": "None",
+    "rating": 4,
+    "description": "Gluten Free. Lactose Free. Vegan. Flavored juice beverage blend of grape, apple & cranberry juices from concentrate. 56% less sugar than cranberry grape juice.",
+    "deleted": false
+  },
+  {
+    "id": 10,
+    "name": "Butter, Unsalted, Sweet Cream",
+    "price": 2.49,
+    "hasUnit": false,
+    "unit": "None",
+    "rating": 4,
+    "description": "Gluten free.",
+    "deleted": false
   }
 ]

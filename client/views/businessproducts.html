@@ -17,17 +17,14 @@
                 <p><a href="http://{{info.website}}">{{info.website}}</a></p>
             </div>
         </div>
-        <div style="width: 100%; margin: 0 auto; text-align: center">
-            <button class="btn liberation_sans" style="color: white; background-color: green; width: 40%; text-align: center;">View Users</button>
-        </div>
         <div class="fill"></div>
     </div>
     <div class="col-md-8 busPanel">
         <h1 class="liberation_sans panelHeader">Products</h1>
         <div class="products" style="margin: 0 auto; align-content: center">
-            <div id="product{{p.id}}" class="productContainer" ng-repeat="p in threeProducts" ng-model="p" style="background: #666666; border-radius: 10px; margin-bottom: 10px; width: 90%; margin-left: auto; margin-right: auto;" ng-dblclick="selectProduct(p, true)">
+            <div id="product{{p.id}}" class="productContainer" ng-repeat="p in products | limitTo:productsPerPage:productsBeginAt" ng-model="p" style="background: #666666; border-radius: 10px; margin-bottom: 10px; width: 90%; margin-left: auto; margin-right: auto;" ng-dblclick="selectProduct(p, true)">
                 <div class="productImageDiv">
-                    <img class="productImage" ng-src="{{p.imgLink}}">
+                    <img class="productImage" ng-src="{{determineImageUrl('wegmans', p.name)}}">
                     <div>
                         <span><img class="ratingLeaf" ng-src="{{p.rating >= 1 ? '../assets/review_leaf_filled.png' : '../assets/review_leaf_empty.png'}}"></span>
                         <span><img class="ratingLeaf" ng-src="{{p.rating >= 2 ? '../assets/review_leaf_filled.png' : '../assets/review_leaf_empty.png'}}"></span>
@@ -37,7 +34,10 @@
                     </div>
                 </div>
                 <button class="btn pull-right" style="background-color: #666666" ng-click="selectProduct(p, false)"  data-toggle="modal" data-target="#productDeletionModal">
-                    <span class="" style="color: white; text-align: right;">&times;</span>
+                    <span style="color: white; text-align: right;">&times;</span>
+                </button>
+                <button class="btn pull-right" style="background-color: #666666" ng-click="selectProduct(p, true)">
+                    <span class="glyphicon glyphicon-pencil" style="color: white; text-align: right;"></span>
                 </button>
                 <div class="productInfoDiv">
                     <p>{{p.name}}</p>
@@ -48,8 +48,8 @@
             </div>
         </div>
         <div id="navarrows" style="width: 100%; margin: 0 auto; text-align: center">
-            <span class="btn glyphicon glyphicon-arrow-left"></span>
-            <span class="btn glyphicon glyphicon-arrow-right"></span>
+            <span id="leftArrow" class="btn glyphicon glyphicon-arrow-left" ng-click="previousPage('p')"></span>
+            <span id="rightArrow" ng-hide="{{productsBeginAt + (productsPerPage - 1) == products.length - 1}}" class="btn glyphicon glyphicon-arrow-right" ng-click="nextPage('p')"></span>
         </div>
     </div>
 </div>

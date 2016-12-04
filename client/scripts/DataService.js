@@ -21,6 +21,5 @@ angular.module('EnviroShop').service('DataService', ['$http', function($http) {
 
     this.getUserFeed = function(business) {
         return $http.get(urlBaseUtil + '/' + 'userfeed.json');
-
-    }
+    };
 }]);

@@ -17,15 +17,11 @@
                 <p><a href="http://{{info.website}}">{{info.website}}</a></p>
             </div>
         </div>
-        <div style="width: 100%; margin: 0 auto; text-align: center">
-            <button class="btn liberation_sans" style="color: white; background-color: green; width: 40%; text-align: center;">View Users</button>
-        </div>
     </div>
-
     <div class="col-md-8" id="initialBusinessRightSide">
         <h1 class="liberation_sans panelHeader">Latest Reviews</h1>
         <div class="reviews">
-            <div class="liberation-sans" ng-repeat="r in fiveReviews" style="background-color: #666666; border-radius: 10px; color: white;">
+            <div class="liberation-sans" ng-repeat="r in reviews | limitTo:5:startAt" style="background-color: #666666; border-radius: 10px; color: white;">
                 <p>{{r.content}}
                     <button class="btn" style="background-color: #666666;" ng-click="selectReview(r)">
                         <span class="" style="color: black; text-align: right;">REPLY</span>
@@ -36,8 +32,8 @@
             </div>
         </div>
         <div id="navarrows" style="width: 100%; margin: 0 auto; text-align: center">
-            <span class="btn glyphicon glyphicon-arrow-left"></span>
-            <span class="btn glyphicon glyphicon-arrow-right"></span>
+            <span id="leftArrow" class="btn glyphicon glyphicon-arrow-left" ng-click="previousPage('r')"></span>
+            <span id="rightArrow" class="btn glyphicon glyphicon-arrow-right" ng-click="nextPage('r')"></span>
         </div>
     </div>
 </div>

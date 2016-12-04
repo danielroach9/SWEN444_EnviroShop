@@ -19,20 +19,13 @@
                 <p><a href="http://{{info.website}}">{{info.website}}</a></p>
             </div>
         </div>
-        <div style="width: 100%; margin: 0 auto; text-align: center">
-            <button class="btn btn-primary">View Users</button>
-        </div>
     </div>
-    <div class="col-md-8" id="initialBusinessRightSide ">
+    <div class="col-md-8" id="initialBusinessRightSide">
        <div class="col-md-4 busPanel" style="width: 50%;">
             <h1 class="liberation_sans panelHeader">Latest Reviews</h1>
            <div class="reviews">
-                <div ng-repeat="r in fiveReviews" style="background-color: #666666; border-radius: 10px;">
-                    <p class="reviewFeed">{{r.content}}
-                        <button class="btn pull-right" style="background-color: #666666">
-                            <span class="" style="color: white; text-align: right;">&times;</span>
-                        </button>
-                    </p>
+                <div ng-repeat="r in reviews | limitTo:5:0" style="background-color: #666666; border-radius: 10px;">
+                    <p class="reviewFeed">{{r.content}}</p>
                     <p class="reviewFeed">-{{r.user}}</p>
                     <p class="reviewFeed" style="text-align: right;">{{r.date_posted | date: "MM-dd-yy"}}</p>
                 </div>

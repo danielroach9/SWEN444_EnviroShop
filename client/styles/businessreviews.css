@@ -17,6 +17,8 @@
 #navarrows span {
     font-size: 2.5em;
     color: white;
+    padding-top: 0px;
+    padding-bottom: 0px;
 }
 
 .col-md-8 {
