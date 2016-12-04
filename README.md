@@ -54,15 +54,18 @@ Instructions for use:
       Email:  enviroshopUser@gmail.com
       Password:  123456
 
-   NOTE:  Many features are either not implemented, or lack robustness because the system does not have a backend.  Use
-          of the system at this point is limited to the tasks users will be tested on in the coming weeks.
+   NOTE:  Some features are either not implemented, or lack robustness because the focus was on the design and therefore the
+	  system does not have a backend. Data can not be persisted and user sessions will be lost when the page is refreshed.
+	  However the functionality required to properly have users test the design is there.
 
-
-Currently the following items are the only executable tasks:
-
-  1. Signing up as a shopper or a business (must be signing up as the wegmans user or the enviroShop user).
-  2. Getting directions to a business as a shopper.
-  3. Writing a review for a business as a shopper.
-  4. Removing a product from your listings as a business.
+   KNOWN BUGS/MISSING FUNCTIONALITY:
+	- Refreshing the page will break profile and home links
+	- Signing up for the site does not actually create a profile, users must use our given profiles in step 8
+	- Users can only write one review
+	- Users can not see items/reviews they have added however confirmation boxes will appear
+	- Map only displays one area, users can not search or move it
+	- The "Filter by" section on the search page is not implemented
+	- Uploading images when adding product is not implemented
+	- Users can not log out of their account
 
 Thank you and enjoy EnviroShop!
