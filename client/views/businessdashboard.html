@@ -56,6 +56,25 @@
     </div>
 </div>
 
+<div class="modal fade" id="confirmProductModal" tabindex="1" role="dialog" aria-labelledby="confirmLabel">
+    <div class="modal-dialog liberation_sans" role="document">
+        <div class="modal-content opaqueGrayDark modal-sm">
+            <div class="modal-header" ng-model="productInfo" style="text-align: center">
+                <h4 class="modal-title" id="confirmLabel">Add {{ productInfo.productName }}?</h4>
+                <img width="50%" height="50%" class="img-circle" src="../assets/imageNotAvailable.jpg"/>
+                <div style="border-radius: 5px; background: white;">
+                    <h4> Price: ${{ productInfo.price }}</h4>
+                    <h4> Description: {{ productInfo.description }}</h4>
+                </div>
+            </div>
+            <div class="modal-body" >
+                <button ng-click="submitProduct()" class="btn btn-primary same-size-button btn-lg">Submit</button>
+                <button class="btn btn-secondary same-size-button btn-lg pull-right" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="modal fade" id="addProductSubmittedModal" tabindex="1" role="dialog" aria-labelledby="successLabel">
     <div class="modal-dialog liberation_sans" role="document">
         <div class="modal-content opaqueGrayDark modal-sm">
