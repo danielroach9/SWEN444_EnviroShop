@@ -1,5 +1,5 @@
 EnviroShop - a web application made to connect people to a healthier lifestyle one bite at a time
-Made by:  Ian Parfitt, Arsh Khalsa, Daniel Roach, James Ward, Joshua Tobin
+Made by:  Ian Parfitt, Arsh, Daniel Roach, James Ward, Joshua Tobin
 
 Instructions for use:
 
