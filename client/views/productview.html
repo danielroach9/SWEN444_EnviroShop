@@ -45,12 +45,51 @@
             </div>
         </div>
         <br>
-        <div class="row">
-            <div class="col-lg-6" style="padding-left: 40px; padding-right: 40px;">
-                    <review></review>
-            </div>
-            <div class="col-lg-6" style="padding-left: 40px; padding-right: 40px;">
-                <review></review>
+        <div class="row" id="reviews">
+            <div class="col-lg-6" style="padding-left: 40px; padding-right: 40px;" ng-repeat="r in reviews">
+                    <!--<review></review>-->
+                <div class="panel panel-success" style="padding-left: 10px; padding-right: 10px;">
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-1" ng-model="r.user"></div>
+                            <div class="col-lg-4 pull-right" style="padding-right: 60px">
+                                <table>
+                                    <tr>
+                                        <th style="padding-right: 0px; padding-left: 0px">
+                                            <div style="padding-right: 0px; padding-left: 0px">
+                                                <img ng-src="{{r.rating >= 1 ? '../assets/review_leaf_filled.png' : '../assets/review_leaf_empty.png'}}" alt="filled" width="18" height="18">
+                                            </div>
+                                        </th>
+                                        <th style="padding-right: 0px; padding-left: 0px">
+                                            <div style="padding-right: 0px; padding-left: 0px">
+                                                <img ng-src="{{r.rating >= 2 ? '../assets/review_leaf_filled.png' : '../assets/review_leaf_empty.png'}}" alt="filled" width="18" height="18">
+                                            </div>
+                                        </th>
+                                        <th style="padding-right: 0px; padding-left: 0px">
+                                            <div style="padding-right: 0px; padding-left: 0px">
+                                                <img ng-src="{{r.rating >= 3 ? '../assets/review_leaf_filled.png' : '../assets/review_leaf_empty.png'}}" alt="filled" width="18" height="18">
+                                            </div>
+                                        </th>
+                                        <th style="padding-right: 0px; padding-left: 0px">
+                                            <div style="padding-right: 0px; padding-left: 0px">
+                                                <img ng-src="{{r.rating >= 4 ? '../assets/review_leaf_filled.png' : '../assets/review_leaf_empty.png'}}" alt="filled" width="18" height="18">
+                                            </div>
+                                        </th>
+                                        <th style="padding-right: 0px; padding-left: 0px">
+                                            <div style="padding-right: 0px; padding-left: 0px">
+                                                <img ng-src="{{r.rating >= 5 ? '../assets/review_leaf_filled.png' : '../assets/review_leaf_empty.png'}}" alt="filled" width="18" height="18">
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <br>
+                        <div ng-model="r.content">
+                            This celery is so delicious. I am happy to be eating this celery because it is healthy and saves the planet.
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

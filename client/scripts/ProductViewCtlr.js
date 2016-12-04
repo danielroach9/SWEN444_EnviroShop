@@ -30,4 +30,15 @@ angular.module('EnviroShop')
         else {
             console.log("path doesn't contain productview in it");
         }*/
+
+        $scope.addReview = function (text, rating, username) {
+
+
+            $('#reviews').append()
+
+            var nr = $("<div>", {"class": "col-lg-6", "style": "padding-left: 40px; padding-right: 40px;"});
+            nr.appendChild()
+
+        };
+
     }]);
