@@ -61,7 +61,7 @@ Instructions for use:
    KNOWN BUGS/MISSING FUNCTIONALITY:
 	- Refreshing the page will break profile and home links
 	- Signing up for the site does not actually create a profile, users must use our given profiles in step 8
-	- Users can only write one review
+	- Users can only write one review, sometimes the review doesn't post
 	- Users can not see items/reviews they have added however confirmation boxes will appear
 	- Map only displays one area, users can not search or move it
 	- The "Filter by" section on the search page is not implemented
